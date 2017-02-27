@@ -1,0 +1,22 @@
+a.mymenu:hover {
+	background-color: white;
+}
+
+.body_para {
+	text-align: justify;
+margin: 2%;
+padding:3%;
+float: left;
+width:60%;
+}
+
+.footer
+{
+margin-top: 2%;
+/*background-color: skyblue;*/
+margin:1%;
+float: right;
+width: 98%;
+text-align: center;
+/*border:1px solid black;*/
+}
