@@ -43,6 +43,14 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #384452;
 }
 
+.newred {
+	background-color: #985441;
+}
+
+.newinactive {
+	background-color: #31708f;
+}
+
 p { 
 	padding: 0; 
 	margin-bottom: 12px; 

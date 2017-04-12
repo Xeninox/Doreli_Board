@@ -3,5 +3,5 @@
 define('SERVER', 'localhost');
 define('USERNAME', 'root');
 define('PASSWORD', '');
-define('DBNAME', 'classproject2017');
+define('DBNAME', 'doreli_board');
 ?>
