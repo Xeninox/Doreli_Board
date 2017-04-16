@@ -11,7 +11,7 @@
     <title>Doreli - Bootstrap 3 Theme</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.css" rel="stylesheet"> 
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="../css/style.css" rel="stylesheet">
@@ -31,9 +31,11 @@
   </head>
 
   <body>
-<?php require_once("../unsecure/processunsecure.php"); ?>
+<?php //require_once("../unsecure/processunsecure.php"); ?>
+<?php require_once("../controller/registrationcontroller.php"); ?>
+
     <!-- Fixed navbar -->
-    <!--div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -59,9 +61,9 @@
               </ul>
             </li>
           </ul>
-        </div></.nav-collapse>
+        </div>
       </div>
-    </div-->
+    </div>
 
 	<!-- *****************************************************************************************************************
 	 HEADERWRAP
@@ -72,7 +74,11 @@
 				<div class="col-md-6 col-sm-6">
 					<h3 style="color: #000">Online Notice Board</h3>
 	              	<p style="color: #fff; font-size: 150%; padding: 3% 0%">Doreli Board is an online advertising board that is used by any institution to transmit information to its members. Doreli Board has made it easier to transmit information in the company by alerting members of the company whenever a message is sent. 
-	              	</p>				
+	              	</p>	
+	              	<div>
+	              		<!-- display signup error or success message -->
+                         <?php signupstatus();?>
+	              	</div>				
 				</div>
 				<div class="col-md-6">
 
@@ -85,63 +91,68 @@
                             <fieldset>
                             <legend>Institution Details</legend>
                             		<div class="form-group">
-                   
-                                    <input class="form-control" placeholder=" institution name" name="instname" type="text" autofocus>
+                                    <input class="form-control" placeholder=" institution name" name="instname" type="text" value= "<?php if(isset($_POST["instname"]) && !empty($_POST["instname"])) echo $_POST["instname"];?>" required autofocus>
+                                    <span style="color: red"> <?php if(isset($GLOBALS['instnameError'])){ echo $GLOBALS['instnameError']; }?></span>
+				                    <span style="color: red"> <?php if(isset($GLOBALS['instnameTaken'])){ echo $GLOBALS['instnameTaken']; }?></span>
                                    </div>
                                 
                                 
                                 
-                                 <div class="form-group">
-  								
- 	                            <textarea class="form-control" rows="5" name="description" placeholder="brief description of your institution"></textarea>
+                                 <div class="form-group">								
+ 	                            <textarea class="form-control" rows="5" name="description" placeholder="brief description of your institution" required><?php if(isset($_POST["description"]) && !empty($_POST["description"])) echo $_POST["description"];?></textarea>
+                                 </div>
+
+                                 <div class="form-group">				
+ 	                            <textarea class="form-control" rows="5" name="address" placeholder="institution address" required><?php if(isset($_POST["address"]) && !empty($_POST["address"])) echo $_POST["address"];?></textarea>
                                  </div>
 
                                  <div class="form-group">
-  								
- 	                            <textarea class="form-control" rows="5" name="address" placeholder="institution address"></textarea>
-                                 </div>
-
-                                 <div class="form-group">
-                   
-                                    <input class="form-control" placeholder="email" name="contact" type="email" >
+                                    <input class="form-control" placeholder=" institution email" name="contact" type="email" value= "<?php if(isset($_POST["contact"]) && !empty($_POST["contact"])) echo $_POST["contact"];?>" required>
+				                    <span style="color: red"> <?php if(isset($GLOBALS['contactError'])){ echo $GLOBALS['contactError']; }?></span>
                                    </div>
 
                                    <div class="form-group">
-
-                                   <label class="btn btn-default btn-lg btn-block btn-file">
-        							institution logo <input type="file" style="display: none;" name="logo">
-                                    </label>
+                                   <label for="#instlogo">upload institution logo </label>
+        							 <input type="file" name="logo" id="instlogo">
+        							 <span style="color: red"> <?php if(isset($GLOBALS['logoError'])){ echo $GLOBALS['logoError']; }?></span>
+                                    
                                     </div>
                                 </fieldset>
+
+                                <!-- Admin Details -->
                                 <fieldset>
                                 <legend> Admin Details</legend>
                                  <div class="form-group">
-                                    <input class="form-control" placeholder=" admin username" name="adminname" type="text">
+                                    <input class="form-control" placeholder=" admin username" name="adminname" type="text" value= "<?php if(isset($_POST["adminname"]) && !empty($_POST["adminname"])) echo $_POST["adminname"];?>" required autofocus>
+                                    <span style="color: red"> <?php if(isset($GLOBALS['adminnameError'])){ echo $GLOBALS['adminnameError']; }?></span>
+				                    <span style="color: red"> <?php if(isset($GLOBALS['adminnameTaken'])){ echo $GLOBALS['adminnameTaken']; }?></span>
                                 </div>
                                 
-                                <div class="form-group">
+                                <div class="form-group">                        
+                                    <input class="form-control" placeholder="admin first name" name="fname" type="text" value= "<?php if(isset($_POST["fname"]) && !empty($_POST["fname"])) echo $_POST["fname"];?>" required>
+                                    <span style="color: red"> <?php if(isset($GLOBALS['adminfnameError'])){ echo $GLOBALS['adminfnameError']; }?></span>
+                                </div>
+
+                                <div class="form-group">                            
+                                    <input class="form-control" placeholder=" last name" name="lname" type="text" value= "<?php if(isset($_POST["lname"]) && !empty($_POST["lname"])) echo $_POST["lname"];?>" required>
+                                    <span style="color: red"> <?php if(isset($GLOBALS['adminlnameError'])){ echo $GLOBALS['adminlnameError']; }?></span>
+                                </div>
                                 
-                                    <input class="form-control" placeholder=" first name" name="fname" type="text" id="fname" autofocus>
+                                <div class="form-group">                          
+                                    <input class="form-control" placeholder=" admin Email" name="email" type="email" value= "<?php if(isset($_POST["email"]) && !empty($_POST["email"])) echo $_POST["email"];?>" required>
+				                    <span style="color: red"> <?php if(isset($GLOBALS['adminemailError'])){ echo $GLOBALS['adminemailError']; }?></span>
+                                </div>
+
+                                <div class="form-group">                             
+                                    <input class="form-control" placeholder="admin Password" name="adminpassword" type="password" required>
+                                    <span style="color: red"> <?php if(isset($GLOBALS['adminpwordError'])){ echo $GLOBALS['adminpwordError']; }?></span>
                                 </div>
 
                                 <div class="form-group">
-                                
-                                    <input class="form-control" placeholder=" last name" name="lname" type="text" id="lname" autofocus>
-                                </div>
-                                
-                                <div class="form-group">
-                               
-                                    <input class="form-control" placeholder=" admin Email" name="email" type="email">
-                                </div>
-                                <div class="form-group">
-                               
-                                    <input class="form-control" placeholder="admin Password" name="adminpassword" type="password" >
-                                </div>
-                                <div class="form-group">
-
-                                   <label class="btn btn-default btn-lg btn-block btn-file">
-        							admin profile picture <input type="file" style="display: none;" name="adminpic">
-                                    </label>
+                                	 <label for="#imageName">Browse profile picture </label>
+        							 <input type="file" name="adminpic" id="imageName">
+        							 <span style="color: red"> <?php if(isset($GLOBALS['adminimageError'])){ echo $GLOBALS['adminimageError']; }?></span>
+                                </div> 
                                    
                                 <button name="registerInstitution" type="submit" class="btn btn-lg btn-primary btn-block">Register</button><br><br>
                                 <a href="login.html" style="color: #fff; text-align: center; font-size: 100%">Already Register? Sign in</a>

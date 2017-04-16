@@ -17,19 +17,20 @@
          /*
           if register button is clicked, call the validregister function
           */
-        else if (isset($_POST['register'])) {
+        /**else if (isset($_POST['register'])) {
             echo "user registering";
             validregister();
 
         }
+        */
+        
         /*
           if register institution button is clicked, call the register institution function
           */
         else if (isset($_POST['registerInstitution'])) {
             echo "admin registering";
             validateregisterinstitution();
-        
-   
+
         }
 
 

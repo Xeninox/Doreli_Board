@@ -31,12 +31,12 @@
   </head>
 
   <body>
-  <?php require_once("../unsecure/processunsecure.php"); ?>
-  
+  <?php require_once("../controller/registrationcontroller.php"); ?>
+  <?php //require_once("../unsecure/processunsecure.php"); ?>
     <?php //require('../settings/initialization.php');?>
 
     <!-- Fixed navbar -->
-    <!--div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -62,9 +62,9 @@
               </ul>
             </li>
           </ul>
-        </div></.nav-collapse>
+        </div><!--/.nav-collapse -->
       </div>
-    </div-->
+    </div>
 
 	<!-- *****************************************************************************************************************
 	 HEADERWRAP
@@ -75,7 +75,12 @@
 				<div class="col-md-8 col-sm-6">
 					<h3 style="color: #000">Online Notice Board</h3>
 	              	<p style="color: #fff; font-size: 150%; padding: 3% 0%">Doreli Board is an online advertising board that is used by any institution to transmit information to its members. Doreli Board has made it easier to transmit information in the company by alerting members of the company whenever a message is sent. 
-	              	</p>				
+	              	</p>
+	              	<div>
+	              		<!-- display signup error or success message -->
+                         <?php signupstatus();?>
+                         
+	              	</div>				
 				</div>
 				<div class="col-md-4 col-sm-6">
                 <div class="login-panel panel panel-default" style="background-color: transparent">                  
@@ -83,49 +88,61 @@
                         <h3 class="panel-title" style="color: #fff">Please Sign Up</h3>
                     </div>
                     <div class="panel-body"> 
+
+
                         <form method="POST" action="">
                             <fieldset>
-                                <div class="form-group">
-                                
-                                    <input class="form-control" placeholder=" Pick a username" name="uname" type="text" id="name" autofocus>
+
+                                <div class="form-group">                       
+                                    <input class="form-control" placeholder=" Pick a username" name="uname" type="text" id="name" value= "<?php if(isset($_POST["uname"]) && !empty($_POST["uname"])) echo $_POST["uname"];?>" required autofocus>
+                                    <span style="color: red"> <?php if(isset($GLOBALS['nameError'])){ echo $GLOBALS['nameError']; }?></span>
+				                    <span style="color: red"> <?php if(isset($GLOBALS['nameTaken'])){ echo $GLOBALS['nameTaken']; }?></span>
                                 </div>
 
-                                <div class="form-group">
-                                
-                                    <input class="form-control" placeholder=" first name" name="fname" type="text" id="fname" autofocus>
+
+                                <div class="form-group">            
+                                    <input class="form-control" placeholder=" first name" name="fname" type="text" id="fname" value= "<?php if(isset($_POST["fname"]) && !empty($_POST["fname"])) echo $_POST["fname"];?>" required>
+                                    <span style="color: red"> <?php if(isset($GLOBALS['fnameError'])){ echo $GLOBALS['fnameError']; }?></span>
                                 </div>
 
-                                <div class="form-group">
-                                
-                                    <input class="form-control" placeholder=" last name" name="lname" type="text" id="lname" autofocus>
+
+                                <div class="form-group">                            
+                                    <input class="form-control" placeholder=" last name" name="lname" type="text" id="lname" value= "<?php if(isset($_POST["lname"]) && !empty($_POST["lname"])) echo $_POST["lname"];?>" required>
+                                    <span style="color: red"> <?php if(isset($GLOBALS['lnameError'])){ echo $GLOBALS['lnameError']; }?></span>
                                 </div>
-                                <div class="form-group">
-                               
-                                    <input class="form-control" placeholder="Email" name="email" type="email" id="mail" value="">
+
+
+                                <div class="form-group">                          
+                                   <input class="form-control" placeholder="Email" name="email" type="email" id="mail" value= "<?php if(isset($_POST["email"]) && !empty($_POST["email"])) echo $_POST["email"];?>" required>
+				                    <span style="color: red"> <?php if(isset($GLOBALS['emailError'])){ echo $GLOBALS['emailError']; }?></span>
                                 </div>
-                                <div class="form-group">
-                               
-                                    <input class="form-control" placeholder="Password" name="password" type="password" id="pswd" value="">
+
+
+                                <div class="form-group">                      
+                                    <input class="form-control" placeholder="Password" name="password" type="password" id="pswd" value="" required>
+                                    <span style="color: red"> <?php if(isset($GLOBALS['pwordError'])){ echo $GLOBALS['pwordError']; }?></span>	
                                 </div>
-                                <div class="form-group">
-                                
+
+
+                                <div class="form-group">                       
                                 <select id="drop" class="form-control" name="institution">
-                                <option>Select Institution</option>
-                                <!--option value="1">Ashesi University</option>
-                                <option value="2">Legon Ghana</option>
-                                <option value="3">Unilever Ghana</option>
-                                <option value="4">Central University</option>
-                                <option value="5">Valley View</option-->
-                                <?php loadInstitution();?>
+                                <option value="0">Select Institution</option>
+                               <!-- Load from database -->
+                                <?php populateInstitution();?>
                                 </select>
+                                <span style="color: red"> <?php if(isset($GLOBALS['institutionError'])){ echo $GLOBALS['institutionError']; }?></span>
                                 </div>
 
-                                    <label class="btn btn-default btn-lg btn-block btn-file">
-        							Browse Image <input type="file" style="display: none;" name="image">
-                                    </label>
+
+                                <div class="form-group">
+                                	 <label for="#imageName">Browse profile picture </label>
+        							 <input type="file" name="image" id="imageName">
+        							 <span style="color: red"> <?php if(isset($GLOBALS['imageError'])){ echo $GLOBALS['imageError']; }?></span>
+                                </div>      
 
                                 <button name="register" type="submit" class="btn btn-lg btn-primary btn-block">Sign Up</button><br>
-                                <a href="login.html" style="color: #fff; text-align: center; font-size: 100%">Already a Member? Sign in</a>
+                                <a href="../login.php" style="color: #fff; text-align: center; font-size: 100%">Already a Member? Sign in</a>
+
                             </fieldset>
                         </form>
                     </div>
