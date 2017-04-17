@@ -29,6 +29,18 @@ class DatabaseConnection
 	}
 
 	/**
+	*Method to return the db connection object
+	*@return db_connection or null
+	*/
+	public function getconnection(){
+		if($this->connect()){
+			return $this->db_connection;
+		} else {
+			return null;
+		}
+	}
+
+	/**
 	*Method to query the database
 	*@return true or false
 	*@param sql query to be executed

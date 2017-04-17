@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b6be012-b820-4885-988c-6d248133da70" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/InstitutionAds.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/InstitutionAdsController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/layout/inst-footer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/layout/instads.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/institution-ads.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/registratoinclass.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/registrationcontroller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/doreli_board.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/register/registerInstitution.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/register/signup.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/unsecure/processunsecure.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/unsecure/preocessunsecure.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/layout/acceptance.php" afterPath="$PROJECT_DIR$/layout/acceptance.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/layout/adminheader.php" afterPath="$PROJECT_DIR$/layout/adminheader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/bootstrap.css" afterPath="$PROJECT_DIR$/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/dbconnectclass.php" afterPath="$PROJECT_DIR$/database/dbconnectclass.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/dbinfo.php" afterPath="$PROJECT_DIR$/database/dbinfo.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +27,28 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="dbinfo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/dbinfo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doreli_board.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/doreli_board.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -36,7 +64,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/settings/core_ini.php" />
-        <option value="$PROJECT_DIR$/database/dbinfo.php" />
         <option value="$PROJECT_DIR$/classes/AdminFunction.php" />
         <option value="$PROJECT_DIR$/database/dbconnectclass.php" />
         <option value="$PROJECT_DIR$/js/ajax-calls.js" />
@@ -57,6 +84,7 @@
         <option value="$PROJECT_DIR$/pages/institution-ads.php" />
         <option value="$PROJECT_DIR$/layout/instads.php" />
         <option value="$PROJECT_DIR$/layout/acceptance.php" />
+        <option value="$PROJECT_DIR$/database/dbinfo.php" />
       </list>
     </option>
   </component>
@@ -90,7 +118,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -218,6 +245,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -331,16 +359,18 @@
       <workItem from="1491956377525" duration="1317000" />
       <workItem from="1491988885848" duration="632000" />
       <workItem from="1492336630685" duration="8959000" />
+      <workItem from="1492461401168" duration="113000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46310000" />
+    <option name="totallyTimeSpent" value="46423000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1932" height="1057" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13622129" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13622129" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -575,14 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/dbinfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings/core_ini.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -605,9 +627,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="25" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -752,6 +772,22 @@
             <marker date="1492345273450" expanded="true" signature="2818:2893" ph="..." />
             <marker date="1492345273450" expanded="true" signature="3016:3091" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/dbinfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/doreli_board.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
