@@ -22,12 +22,17 @@
             <?php require_once('../controller/AdminFunctionController.php');
             $array = getAllInactiveUsers(1);
             $i = 0;
-            foreach ($array as $item) {
-                $username = $item['username'];
-                $user_id = $item['user_id'];
+            $num_inactive = getNumInactiveUsers();
+            $actual_num_inactive = $num_inactive["COUNT(*)"];
+            if ($actual_num_inactive == 0){
+                echo "<h3>Sorry, No New Users</h3>";
+            } else {
+                foreach ($array as $item) {
+                    $username = $item['username'];
+                    $user_id = $item['user_id'];
 
-                if ($i % 2 == 0){
-                    echo "<div class=\"col-lg-4\">
+                    if ($i % 2 == 0){
+                        echo "<div class=\"col-lg-4\">
                 <div class=\"panel panel-primary text-center no-boder\">
                     <div class=\"panel-body green\">
                         <i class=\"fa fa-thumbs-up fa-3x\"></i>
@@ -42,8 +47,8 @@
                     </div>
                 </div>
             </div>";
-                } else {
-                    echo "<div class=\"col-lg-4\">
+                    } else {
+                        echo "<div class=\"col-lg-4\">
                             <div class=\"panel panel-primary text-center no-boder\">
                                 <div class=\"panel-body red\">
                                     <i class=\"fa fa-thumbs-up fa-3x\" style=\"color: white;\"></i>
@@ -58,9 +63,11 @@
                                 </div>
                             </div>
                         </div>";
+                    }
+                    $i++;
                 }
-                $i++;
             }
+
             ?>
 
         </div>

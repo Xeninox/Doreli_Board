@@ -12,7 +12,7 @@
         </div>
         <div class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
-                <li><a href="user_home.html">HOME</a></li>
+                <li><a href="institution-ads.php">MY INSTITUTION ADS</a></li>
                 <li><a href="upload.html">UPLOAD</a></li>
                 <li><a href="accept-users.php">USER REQUEST</a></li>
                 <li><a href="admin-analysis.php">ANALYSIS</a></li>
