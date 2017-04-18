@@ -14,11 +14,11 @@
     <title>Signup for Doreli</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
 
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -30,12 +30,13 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    <script src="assets/js/modernizr.js"></script>
+    <script src="../js/modernizr.js"></script>
   </head>
 
 <body>
+<?php require_once("../controller/logincontroller.php"); ?>
 <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <!--div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -61,9 +62,9 @@
               </ul>
             </li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
-    </div>
+    </div-->
 
     <!-- *****************************************************************************************************************
      HEADERWRAP
@@ -81,10 +82,10 @@
                         <h3 class="panel-title">Please Log In</h3>
                     </div>
                     <div class="panel-body">
-                        <form>
+                        <form method="post" action= "">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                    <input class="form-control" placeholder="Username" name="username" type="text" autofocus>
                                 </div>
                                 <div class="form-group">
                                     <input class="form-control" placeholder="Password" name="password" type="password" value="">
@@ -95,7 +96,7 @@
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="" class="btn btn-lg btn-success btn-block">Login</a>
+                                <input type= "submit" class="btn btn-lg btn-success btn-block" name="login" value = "Login">
                             </fieldset>
                         </form>                        
                         <h4>Don't have a doreli account? <a href="register/signup.php">Sign up</a></h4>
@@ -107,9 +108,9 @@
     </div>
 
      <!-- Core Scripts - Include with every page -->
-    <script src="assets/plugins/jquery-1.10.2.js"></script>
-    <script src="assets/plugins/bootstrap/bootstrap.min.js"></script>
-    <script src="assets/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="../plugins/jquery-1.10.2.js"></script>
+    <script src="../plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="../plugins/metisMenu/jquery.metisMenu.js"></script>
 
 </body>
 
