@@ -20,12 +20,13 @@
             </div>
 
             <?php require_once('../controller/AdminFunctionController.php');
-            $array = getAllInactiveUsers(1);
+            $array = getAllInactiveUsers();
             $i = 0;
             $num_inactive = getNumInactiveUsers();
             $actual_num_inactive = $num_inactive["COUNT(*)"];
             if ($actual_num_inactive == 0){
-                echo "<h3>Sorry, No New Users</h3>";
+                echo "<h4 style='color: black;'>Sorry, No New Users</h4>";
+                echo "<img src=\"../image/sad.png\" style='height: 250px;'>";
             } else {
                 foreach ($array as $item) {
                     $username = $item['username'];

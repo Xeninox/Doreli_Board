@@ -3,9 +3,8 @@ require_once('../database/dbconnectclass.php');
 
 /**
  * Created by PhpStorm.
- * User: Constant Likudie
- * Date: 05/04/2017
- * Time: 12:08 PM
+ * @author: Constant Likudie
+ * @version 1.0
  */
 class AdminFunctionClass extends DatabaseConnection
 {
@@ -27,18 +26,18 @@ class AdminFunctionClass extends DatabaseConnection
 
     }
 
-    function getNumAccepted(){
-        $num_accepted_query = "SELECT COUNT(*) FROM users WHERE status = 'ACTIVE'";
+    function getNumAccepted($institution_id){
+        $num_accepted_query = "SELECT COUNT(*) FROM users WHERE status = 'ACTIVE' AND institution_id = '$institution_id'";
         return $this->query($num_accepted_query);
     }
 
-    function getNumInactive(){
-        $num_accepted_query = "SELECT COUNT(*) FROM users WHERE status = 'INACTIVE'";
+    function getNumInactive($institution_id){
+        $num_accepted_query = "SELECT COUNT(*) FROM users WHERE status = 'INACTIVE' AND institution_id = '$institution_id'";
         return $this->query($num_accepted_query);
     }
 
-    function getNumRejected(){
-        $num_accepted_query = "SELECT COUNT(*) FROM users WHERE status = 'REJECTED'";
+    function getNumRejected($institution_id){
+        $num_accepted_query = "SELECT COUNT(*) FROM users WHERE status = 'REJECTED' AND institution_id = '$institution_id'";
         return $this->query($num_accepted_query);
     }
 

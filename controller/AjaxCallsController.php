@@ -1,9 +1,8 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Constant Likudie
- * Date: 10/04/2017
- * Time: 08:20 PM
+ * @author: Constant Likudie
+ * @version 1.0
  */
 require_once("AdminFunctionController.php");
 
