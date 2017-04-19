@@ -2,97 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b6be012-b820-4885-988c-6d248133da70" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doreli_Board" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/publicpageclass.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/publicpagecontroller.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/newpublicpage.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/hoverex-all.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_rounded/btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_rounded/btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_rounded/contentPattern.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_rounded/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_rounded/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_square/btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_square/btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_square/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_square/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/default/default_thumb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/default/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/default/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/default/sprite_next.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/default/sprite_prev.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/default/sprite_x.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/default/sprite_y.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/contentPatternBottom.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/contentPatternLeft.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/contentPatternRight.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/contentPatternTop.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/default_thumbnail.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/light_rounded/btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/light_rounded/btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/light_rounded/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/light_rounded/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/light_square/btnNext.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/light_square/btnPrevious.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/light_square/sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/prettyPhoto.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/agency.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/browser.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/clients/client01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/clients/client02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/clients/client03.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/clients/client04.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/contact.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_06.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_07.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_08.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_09.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/single01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/single02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/single03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/post01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/post02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/post03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/t-back.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/team/team01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/team/team02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/team/team03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/team/team04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/thumb01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/thumb02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/thumb03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/image/thumb04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/custom.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/jquery.hoverdir.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/jquery.hoverex.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/jquery.isotope.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/jquery.prettyPhoto.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/retina-1.1.0.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/registrationcontroller.php" afterPath="$PROJECT_DIR$/controller/registrationcontroller.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Doreli_Board" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -104,7 +15,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="registrationcontroller.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="registrationcontroller.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/registrationcontroller.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -115,6 +26,58 @@
                 <marker date="1492604531602" expanded="true" signature="2999:3008" ph="..." />
                 <marker date="1492604531602" expanded="true" signature="3185:3194" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="instads.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/layout/instads.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="842">
+              <caret line="53" column="36" lean-forward="true" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+              <folding>
+                <marker date="1492602341864" expanded="true" signature="168:328" ph="..." />
+                <marker date="1492602341864" expanded="true" signature="198:301" ph="..." />
+                <marker date="1492602341864" expanded="true" signature="226:277" ph="..." />
+                <marker date="1492602341864" expanded="true" signature="925:938" ph="..." />
+                <marker date="1492602341864" expanded="true" signature="1041:1055" ph="..." />
+                <marker date="1492602341864" expanded="true" signature="1777:2115" ph="..." />
+                <marker date="1492602341864" expanded="true" signature="2170:2189" ph="data:" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newpublicpage.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/newpublicpage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="publicpagecontroller.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/publicpagecontroller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1492604456682" expanded="true" signature="370:595" ph="..." />
+                <marker date="1492604456682" expanded="true" signature="399:595" ph="..." />
+                <marker date="1492604456682" expanded="true" signature="426:582" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logincontroller.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/logincontroller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -454,12 +417,12 @@
       <workItem from="1492336630685" duration="8959000" />
       <workItem from="1492461401168" duration="3420000" />
       <workItem from="1492537102538" duration="7062000" />
-      <workItem from="1492596643312" duration="7735000" />
+      <workItem from="1492596643312" duration="9005000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64527000" />
+    <option name="totallyTimeSpent" value="65797000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1932" height="1057" extended-state="0" />
@@ -497,22 +460,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/settings/core_ini.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/dbinfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings/core_ini.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -676,14 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/logincontroller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/login/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="553">
@@ -760,24 +699,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/layout/instads.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="53" column="36" lean-forward="true" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h4#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1492602341864" expanded="true" signature="168:328" ph="..." />
-            <marker date="1492602341864" expanded="true" signature="198:301" ph="..." />
-            <marker date="1492602341864" expanded="true" signature="226:277" ph="..." />
-            <marker date="1492602341864" expanded="true" signature="925:938" ph="..." />
-            <marker date="1492602341864" expanded="true" signature="1041:1055" ph="..." />
-            <marker date="1492602341864" expanded="true" signature="1777:2115" ph="..." />
-            <marker date="1492602341864" expanded="true" signature="2170:2189" ph="data:" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -959,6 +880,50 @@
             <marker date="1492604531602" expanded="true" signature="2999:3008" ph="..." />
             <marker date="1492604531602" expanded="true" signature="3185:3194" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/layout/instads.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="842">
+          <caret line="53" column="36" lean-forward="true" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+          <folding>
+            <marker date="1492602341864" expanded="true" signature="168:328" ph="..." />
+            <marker date="1492602341864" expanded="true" signature="198:301" ph="..." />
+            <marker date="1492602341864" expanded="true" signature="226:277" ph="..." />
+            <marker date="1492602341864" expanded="true" signature="925:938" ph="..." />
+            <marker date="1492602341864" expanded="true" signature="1041:1055" ph="..." />
+            <marker date="1492602341864" expanded="true" signature="1777:2115" ph="..." />
+            <marker date="1492602341864" expanded="true" signature="2170:2189" ph="data:" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/newpublicpage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/publicpagecontroller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1492604456682" expanded="true" signature="370:595" ph="..." />
+            <marker date="1492604456682" expanded="true" signature="399:595" ph="..." />
+            <marker date="1492604456682" expanded="true" signature="426:582" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/logincontroller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
