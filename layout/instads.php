@@ -31,6 +31,7 @@ echo "<div id=\"blue\">
             } else {
                 $array = getAllInstutionAds();
                 foreach ($array as $item) {
+                    $ad_id = $item['id'];
                     $category = $item['cat_id'];
                     $subject = $item['subject'];
                     $comment = $item['comment'];
@@ -51,8 +52,8 @@ echo "<div id=\"blue\">
             <h3 class=\"ctitle\">$subject</h3>
             <p><csmall>Posted: $newdate</csmall> | <csmall2>By: $username </csmall2></p>
             <p>$comment</p>
+            <button type='submit' name='viewad' value = \"$ad_id\" class=\"btn btn-warning btn-block\">View Ad</button> <br>
             <div class=\"hline\"></div>
-
             <div class=\"spacing\"></div>
         <! --/col-lg-8 -->";
                 }
