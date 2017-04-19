@@ -2,30 +2,97 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5b6be012-b820-4885-988c-6d248133da70" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/login/logout.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/database/doreli_board.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/index.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/AdminFunctionClass.php" afterPath="$PROJECT_DIR$/classes/AdminFunctionClass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/InstitutionAds.php" afterPath="$PROJECT_DIR$/classes/InstitutionAds.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/loginclass.php" afterPath="$PROJECT_DIR$/classes/loginclass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classes/registratoinclass.php" afterPath="$PROJECT_DIR$/classes/registratoinclass.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/AdminFunctionController.php" afterPath="$PROJECT_DIR$/controller/AdminFunctionController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/AjaxCallsController.php" afterPath="$PROJECT_DIR$/controller/AjaxCallsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/InstitutionAdsController.php" afterPath="$PROJECT_DIR$/controller/InstitutionAdsController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/logincontroller.php" afterPath="$PROJECT_DIR$/controller/logincontroller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Doreli_Board" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/publicpageclass.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/publicpagecontroller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pages/newpublicpage.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/font-awesome.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/hoverex-all.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_rounded/btnNext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_rounded/btnPrevious.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_rounded/contentPattern.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_rounded/loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_rounded/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_square/btnNext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_square/btnPrevious.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_square/loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/dark_square/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/default/default_thumb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/default/loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/default/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/default/sprite_next.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/default/sprite_prev.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/default/sprite_x.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/default/sprite_y.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/btnNext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/btnPrevious.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/contentPatternBottom.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/contentPatternLeft.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/contentPatternRight.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/contentPatternTop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/default_thumbnail.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/facebook/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/light_rounded/btnNext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/light_rounded/btnPrevious.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/light_rounded/loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/light_rounded/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/light_square/btnNext.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/light_square/btnPrevious.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/images/prettyPhoto/light_square/sprite.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/css/prettyPhoto.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/FontAwesome.otf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/fontawesome-webfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/agency.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/browser.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/clients/client01.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/clients/client02.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/clients/client03.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/clients/client04.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/contact.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_05.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_06.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_07.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_08.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_09.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/portfolio_10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/single01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/single02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/portfolio/single03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/post01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/post02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/post03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/t-back.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/team/team01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/team/team02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/team/team03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/team/team04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/thumb01.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/thumb02.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/thumb03.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/image/thumb04.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/custom.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/jquery.hoverdir.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/jquery.hoverex.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/jquery.isotope.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/jquery.prettyPhoto.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/retina-1.1.0.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/registrationcontroller.php" afterPath="$PROJECT_DIR$/controller/registrationcontroller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/layout/acceptance.php" afterPath="$PROJECT_DIR$/layout/acceptance.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/layout/adminheader.php" afterPath="$PROJECT_DIR$/layout/adminheader.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/layout/analysis.php" afterPath="$PROJECT_DIR$/layout/analysis.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/layout/instads.php" afterPath="$PROJECT_DIR$/layout/instads.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login/login.php" afterPath="$PROJECT_DIR$/login/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/accept-users.php" afterPath="$PROJECT_DIR$/pages/accept-users.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/admin-analysis.php" afterPath="$PROJECT_DIR$/pages/admin-analysis.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/institution-ads.php" afterPath="$PROJECT_DIR$/pages/institution-ads.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register/registerInstitution.php" afterPath="$PROJECT_DIR$/register/registerInstitution.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register/signup.php" afterPath="$PROJECT_DIR$/register/signup.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings/core_ini.php" afterPath="$PROJECT_DIR$/settings/core_ini.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,7 +103,23 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="registrationcontroller.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/registrationcontroller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="89" column="12" lean-forward="true" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="12" />
+              <folding>
+                <element signature="e#8#59#0#PHP" expanded="true" />
+                <marker date="1492604531602" expanded="true" signature="2676:2687" ph="..." />
+                <marker date="1492604531602" expanded="true" signature="2999:3008" ph="..." />
+                <marker date="1492604531602" expanded="true" signature="3185:3194" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -65,7 +148,6 @@
         <option value="$PROJECT_DIR$/login/login.php" />
         <option value="$PROJECT_DIR$/register/signup.php" />
         <option value="$PROJECT_DIR$/register/registerInstitution.php" />
-        <option value="$PROJECT_DIR$/controller/registrationcontroller.php" />
         <option value="$PROJECT_DIR$/login/logout.php" />
         <option value="$PROJECT_DIR$/layout/acceptance.php" />
         <option value="$PROJECT_DIR$/layout/analysis.php" />
@@ -81,6 +163,7 @@
         <option value="$PROJECT_DIR$/pages/admin-analysis.php" />
         <option value="$PROJECT_DIR$/pages/institution-ads.php" />
         <option value="$PROJECT_DIR$/settings/core_ini.php" />
+        <option value="$PROJECT_DIR$/controller/registrationcontroller.php" />
       </list>
     </option>
   </component>
@@ -116,16 +199,6 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Doreli_Board" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Doreli_Board" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Doreli_Board" />
@@ -207,6 +280,16 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Doreli_Board" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Doreli_Board" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -371,17 +454,18 @@
       <workItem from="1492336630685" duration="8959000" />
       <workItem from="1492461401168" duration="3420000" />
       <workItem from="1492537102538" duration="7062000" />
-      <workItem from="1492596643312" duration="7545000" />
+      <workItem from="1492596643312" duration="7735000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64337000" />
+    <option name="totallyTimeSpent" value="64527000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1932" height="1057" extended-state="1" />
+    <frame x="-7" y="0" width="1932" height="1057" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16127348" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16127348" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -636,18 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/registrationcontroller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="89" column="41" lean-forward="false" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
-          <folding>
-            <marker date="1492598894339" expanded="true" signature="2137:2148" ph="..." />
-            <marker date="1492598894339" expanded="true" signature="2428:2437" ph="..." />
-            <marker date="1492598894339" expanded="true" signature="2590:2599" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/layout/analysis.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="553">
@@ -874,6 +946,19 @@
         <state relative-caret-position="51">
           <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/registrationcontroller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="89" column="12" lean-forward="true" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="12" />
+          <folding>
+            <element signature="e#8#59#0#PHP" expanded="true" />
+            <marker date="1492604531602" expanded="true" signature="2676:2687" ph="..." />
+            <marker date="1492604531602" expanded="true" signature="2999:3008" ph="..." />
+            <marker date="1492604531602" expanded="true" signature="3185:3194" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
