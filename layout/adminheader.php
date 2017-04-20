@@ -21,7 +21,7 @@
                 }
                 ?>
 
-                <li><a href="upload.html">UPLOAD</a></li>
+                <li><a href="upload.php">UPLOAD</a></li>
                 <li class="dropdown active">
                     <?php $encoded_image = base64_encode($_SESSION['profile_pic']);
                     echo "<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><img src=\"data:image;base64, {$encoded_image}\"\" id=\"pic\" style=\"height: 40px;\"><b class=\"caret\"></b></a>";

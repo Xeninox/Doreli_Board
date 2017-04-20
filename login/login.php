@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<html>
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -36,23 +33,23 @@
 <body>
 <?php require_once("../controller/logincontroller.php"); ?>
 
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Doreli.</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Doreli.</a>
         </div>
         <div class="navbar-collapse collapse navbar-right">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="../register/signup.php">SIGN UP</a></li>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="../register/signup.php">SIGN UP</a></li>
         </div>
-      </div>
     </div>
+</div>
 
 <!-- *****************************************************************************************************************
  HEADERWRAP
