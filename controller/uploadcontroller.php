@@ -28,6 +28,9 @@
 		global $subj;
 		global $comm;
 		global $input;
+        global $userId;
+        global $instId;
+
 		$ok = true;
 
     	if (!isset($_POST['catType']) || $_POST['catType'] === '' || $_POST['catType'] == "Please Select A Category") 
@@ -89,7 +92,7 @@
 
     	if ($ok) 
     	{
-            uploadNotice($catType, $subj, $comm, $input, $display, 5, 5);
+            uploadNotice($catType, $subj, $comm, $input, $display, $userId, $instId);
 		}
 
 		else
@@ -99,12 +102,12 @@
 
 	function uploadNotice($catType, $subj, $comm, $input, $display, $userId, $instId)
 	{
- 		//global $userId;
- 		//global $instId;
+ 		global $userId;
+ 		global $instId;
 
 		$insertNotice = new upload;
 
-		$output = $insertNotice->uploadQuery($catType, $subj, $comm, $input, $display, 5, 5);
+		$output = $insertNotice->uploadQuery($catType, $subj, $comm, $input, $display, $userId, $instId);
 
 		if ($output)
        	{
@@ -126,8 +129,8 @@
 		$tempname = addslashes($_FILES[$input]['tmp_name']);
 		$name = addslashes($_FILES[$input]['name']);
 		$getimage = addslashes(file_get_contents($tempname));
-		$image = base64_encode($getimage);
-		return $image;
+		//$image = base64_encode($getimage);
+		return $getimage;
 	}
 
 
