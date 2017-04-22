@@ -43,29 +43,24 @@ function viewOneAd(){
         </div><!-- /row -->
        </div> <!-- /container -->
   </div>";
+  echo "<div class=\"container mtb\">
 
-	echo '
-	<div class="container mtb">
-
-    <div class="row">
-    <div class="col-md-8">
-    <img src="../image/post01.jpg" style="height: 350px;">
-     <p><!--img class="img-responsive" style="height: 250px;" src="data:image;base64",'.$encoded_image.'"--></p>
+    <div class=\"row\">
+    <div class=\"col-md-8\">
+     <p><img class=\"img-responsive\" style=\"height: 450px;\" src=\"data:image;base64,{$encoded_image}\"--></p>
     </div>
 
-    <div class="col-md-4">
-    <h3 style = "color: orange"> Poster Details</h3>
-    <h4 class="ctitle"> Subject: '.$subject.'</h4>
-    <span style = "color: orange"> Category: </span> <span>'.$category_name.'</span><br><br>
-    <span style = "color: orange"> Posted on : </span> <span>'. $newdate.'</span> <br><br>
-    <span style = "color: orange"> Posted by : </span> <span> '.$posted_by.'</span> <br><br>
-    <span style = "color: orange"> Comment : </span><span>'.$comment.'</span> <br> <br>
-    <a href="institution-ads.php" class = "btn btn-primary">Go Back</a>
+    <div class=\"col-md-4\">
+    <h3 style = \"color: orange\"> Poster Details</h3>
+    <h4 class=\"ctitle\"> Subject: $subject</h4>
+    <span style = \"color: orange\"> Category: </span> <span>$category_name</span><br><br>
+    <span style = \"color: orange\"> Posted on : </span> <span>$newdate</span> <br><br>
+    <span style = \"color: orange\"> Posted by : </span> <span>$posted_by</span> <br><br>
+    <span style = \"color: orange\"> Comment : </span><span>$comment</span> <br> <br>
+    <a href=\"institution-ads.php\" class = \"btn btn-primary\">Go Back</a>
     </div>
     </div>
-    </div>
-    
-	';
+    </div>";
 }
 function noAdToView(){
   echo "<div id=\"blue\">

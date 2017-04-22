@@ -44,7 +44,9 @@
             <h3 class=\"ctitle\">$subject</h3>
             <p><csmall>Posted: $newdate</csmall> | <csmall2>By: $username </csmall2></p>
             <p>$comment</p>
-            <button type='submit' name='viewad' value = \"$ad_id\" class=\"btn btn-warning btn-block\">View Ad</button> <br>
+            <form action = \"viewaddetails.php\" method = \"post\" style = \"background: none\"> 
+            <button type='submit' name='viewad' value = \"$ad_id\" class=\"btn btn-warning btn-block\">View Ad</button> 
+            </form><br>
             <div class=\"hline\"></div>
             <div class=\"spacing\"></div>
         <! --/col-lg-8 -->";
