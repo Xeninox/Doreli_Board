@@ -1,9 +1,9 @@
 <?php 
 
-/**
-*@author Isaac Coffie 
-*@version Version 1.0
-*/
+        /**
+        *@author Isaac Coffie 
+        *@version Version 1.0
+        */
 
         //include registration class 
 
@@ -27,6 +27,7 @@
             echo "admin registering";
             validateregisterinstitution();
           }
+
 
         /**
         *a function to Signup user
@@ -80,14 +81,14 @@
  
 
          /**
-          *a function to display signing up user status
+          *a function to display error or success message upon registration
           */
          function signupstatus()
          {
             if (!empty($GLOBALS['status']) && $GLOBALS['status'] == 1) {
             	echo "<center><h3 style='color:green'>Insertion Successful </h3></center> <br>
             	<h5>You will be redirected to login pages in 5 seconds<h5>";
-                header("Refresh: 5; URL=../login.php");
+                header("Refresh: 5; URL=../login/login.php");
             }
             else if (!empty($GLOBALS['status']) && $GLOBALS['status'] == 2) {
                 echo "<center><h3 style='color:red'> Insertion Unsuccessful </h3></center>" ;
@@ -96,6 +97,37 @@
                 echo "<center><h3 style='color:red'> Validation Unsuccessful. Kindly provide valid data </h3></center>" ;
             }
          }
+
+      /**
+      *a function to clear input fields
+      */
+        function clearFormElements()
+        {
+              $_POST["uname"] = "";
+              $_POST["fname"] = "";
+              $_POST["lname"] = "";
+              $_POST["email"] = "";
+              $_POST["password"] = "";
+              $_POST["institution"] = "";
+              $_POST["image"] = "";
+
+        }
+
+     /**
+    *a function to upload user picture
+    *@param $filename filename of the input field
+    *@return $image upon successfull upload otherwise null  
+    */
+        function uploadProfilePicture($filename){
+          $image = null;
+          $tempImage = addslashes($_FILES[$filename]['tmp_name']);
+          $imageName = addslashes($_FILES[$filename]['name']);
+          $getimage = addslashes(file_get_contents($tempImage));
+          $image = base64_encode($getimage);
+          return $image;
+
+        }
+
 
 
          /**
@@ -209,22 +241,8 @@
               return $ok;
         }
 
-    /**
-    a function to clear input fields
-    */
-        function clearFormElements()
-        {
-            	$_POST["uname"] = "";
-            	$_POST["fname"] = "";
-            	$_POST["lname"] = "";
-            	$_POST["email"] = "";
-            	$_POST["password"] = "";
-            	$_POST["institution"] = "";
-            	$_POST["image"] = "";
-
-        }
-
-    /*
+    
+          /*
           a function to validate user inputs
           */
         function validateregisterinstitution() {
@@ -419,15 +437,7 @@
                  } 
         }
 
-        function uploadProfilePicture($filename){
-          $image = null;
-          $tempImage = addslashes($_FILES[$filename]['tmp_name']);
-          $imageName = addslashes($_FILES[$filename]['name']);
-          $getimage = addslashes(file_get_contents($tempImage));
-          $image = base64_encode($getimage);
-          return $image;
-
-        }
+        
 
         
  ?>

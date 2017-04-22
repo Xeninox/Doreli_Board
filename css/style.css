@@ -545,6 +545,11 @@ a:focus {
 	font-weight: 700;
 	margin-bottom: 15px;
 }
+#text1 {
+	color: #fff;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
 
 csmall {
 	font-size: 12px;

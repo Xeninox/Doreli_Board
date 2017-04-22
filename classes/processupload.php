@@ -17,8 +17,6 @@
 
 		//methods
 
-
-
 		//function for uploading
 		function uploadQuery($catType, $subj, $comm, $input, $display, $userId, $instId)
 		{

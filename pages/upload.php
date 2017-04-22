@@ -23,8 +23,8 @@
 <body>
 <?php
 require_once("../settings/core_ini.php");
-verifyUserLogin();
-require_once("../layout/adminheader.php");
+//verifyUserLogin();
+//require_once("../layout/adminheader.php");
 require_once("../unsecure/uploadProcessUnsecure.php");
 require_once("../controller/uploadcontroller.php");
 
@@ -109,7 +109,7 @@ require_once("../controller/uploadcontroller.php");
 </div><! --/container -->
 
 <?php
-require_once("../layout/footer.php");
+//require_once("../layout/footer.php");
 ?>
 
 <!-- Bootstrap core JavaScript

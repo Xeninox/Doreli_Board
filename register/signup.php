@@ -45,20 +45,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Doreli.</a>
+          <a class="navbar-brand" href="">Doreli.</a>
         </div>
         <div class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li class="active"><a href="">HOME</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">CONTACT</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">PAGES <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="blog.html">BLOG</a></li>
-                <li><a href="single-post.html">SINGLE POST</a></li>
-                <li><a href="portfolio.html">PORTFOLIO</a></li>
-                <li><a href="single-project.html">SINGLE PROJECT</a></li>
+                <li><a href="registerInstitution.php">REGISTER INSTITUTION</a></li>
               </ul>
             </li>
           </ul>
@@ -141,7 +138,7 @@
                                 </div>      
 
                                 <button name="register" type="submit" class="btn btn-lg btn-primary btn-block">Sign Up</button><br>
-                                <a href="../login.php" style="color: #fff; text-align: center; font-size: 100%">Already a Member? Sign in</a>
+                                <a href="../login/login.php" style="color: #fff; text-align: center; font-size: 100%">Already a Member? Sign in</a>
 
                             </fieldset>
                         </form>
