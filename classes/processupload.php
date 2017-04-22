@@ -10,14 +10,20 @@
 	class upload extends DatabaseConnection 
 	{
 		//properties
-		/**
-		*@param 
-		*@param 
-		**/
 
 		//methods
 
+<<<<<<< HEAD
 		//function for uploading
+=======
+
+
+		/**
+		*function to upload the ad details into the database
+		*@param ad details
+		*@return success or failure of upload
+		**/
+>>>>>>> 85022b83c455d77ee10a2643774d0bab435c80e7
 		function uploadQuery($catType, $subj, $comm, $input, $display, $userId, $instId)
 		{
 
@@ -39,6 +45,18 @@
 	      	return $this->query($myQuery);
 	           	
 		}
+
+		/**
+		*function to display the categories in the categories table
+		*@return categories in the database
+		**/
+    	function getCategory()
+		{
+	        $myQuery = "SELECT * FROM categories";
+
+	        //execution of query
+	        return $this->query($myQuery);
+    	}
 
 		
 	}

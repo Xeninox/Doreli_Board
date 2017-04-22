@@ -26,6 +26,12 @@ function getUsername(){
     return $inst_ads->fetch();
 }
 
+function getUsernameWithID($user_id){
+    $inst_ads = new InstitutionAds();
+    $inst_ads->getUsername($user_id);
+    return $inst_ads->fetch();
+}
+
 function getUserInstituion(){
     global $institution_id;
     $inst_ads = new InstitutionAds();
@@ -38,4 +44,17 @@ function getNumUploadForInstitution(){
     $inst_ads = new InstitutionAds();
     $inst_ads->getNumUploads($institution_id);
     return $inst_ads->fetch();
+}
+
+function getCatAds($cat_id){
+    $cat_ads = new InstitutionAds();
+    $cat_ads->getCategoryAds($cat_id);
+    return $cat_ads->fetchResultObject();
+}
+
+
+function getCategoryAdsForPublic($cat_id){
+    $cat_ads = new InstitutionAds();
+    $cat_ads->getCategoryAdsForPublic($cat_id);
+    return $cat_ads->fetchResultObject();
 }
