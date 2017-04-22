@@ -41,7 +41,6 @@ include_once('../settings/core_ini.php');
 ?>
 <?php include_once('../layout/adminheader.php'); ?>
 <?php include_once('../layout/instads.php'); ?>
-<?php include_once('../layout/inst-footer.php'); ?>
 
 
 

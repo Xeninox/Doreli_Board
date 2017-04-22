@@ -6,7 +6,7 @@
     </div> <!-- /container -->
 </div><!-- /blue -->";
 
-<div class="container mtb">
+<div class="container mtb" style="margin-top: 0%;">
     <div class="row">
 
         <! --POSTS LIST -->
@@ -40,7 +40,7 @@
             <!-- You can use this code at the php part to display the reults. Provide the subject, picture,
             date posted, username of user who posted and the comment(content) if available.
             I have limited the notice types to text and images only. if it is text, remove the image tag and display just the subject and comment(content)-->
-            <p><img class=\"img-responsive\" src=\"data:image;base64, {$encoded_image}\"></p>
+            <p><img class=\"img-responsive\" src=\"data:image;base64image;base64, {$encoded_image}\"></p>
             <h3 class=\"ctitle\">$subject</h3>
             <p><csmall>Posted: $newdate</csmall> | <csmall2>By: $username </csmall2></p>
             <p>$comment</p>

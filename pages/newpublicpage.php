@@ -41,7 +41,6 @@ verifyUserLogin();
 ?>
 <?php include_once('../layout/adminheader.php'); ?>
 <?php include_once('../layout/public-ads.php'); ?>
-<?php include_once('../layout/inst-footer.php'); ?>
 
 
 
