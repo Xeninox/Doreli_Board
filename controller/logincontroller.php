@@ -47,7 +47,7 @@ function validlogin(){
 
 function userlogin($username, $password){
 
-    $login = new Login ;
+    $login = new Login;
     $dbquery = $login->verifylogin($username, $password);
 
     if($dbquery){

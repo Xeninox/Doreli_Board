@@ -21,10 +21,11 @@
 </head>
 
 <body>
+<<<<<<< HEAD
 <?php
 require_once("../settings/core_ini.php");
-verifyUserLogin();
-require_once("../layout/adminheader.php");
+//verifyUserLogin();
+//require_once("../layout/adminheader.php");
 require_once("../unsecure/uploadProcessUnsecure.php");
 require_once("../controller/uploadcontroller.php");
 
@@ -34,65 +35,81 @@ require_once("../controller/uploadcontroller.php");
  ***************************************************************************************************************** -->
 <div id="blue">
     <div class="container">
+=======
+    <?php
+    //add all the files reequired for the page to run
+    require_once("../settings/core_ini.php");
+    verifyUserLogin();
+    require_once("../layout/adminheader.php");
+    require_once("../controller/uploadcontroller.php");
+
+    ?>
+    <!-- *****************************************************************************************************************
+     BLUE WRAP
+     ***************************************************************************************************************** -->
+    <div id="blue">
+        <div class="container">
+            <div class="row">
+                <h3>Upload Notice</h3>
+            </div><!-- /row -->
+        </div> <!-- /container -->
+    </div><!-- /blue -->
+
+
+    <!-- *****************************************************************************************************************
+     PAGE CONTENT
+     ***************************************************************************************************************** -->
+
+    <div class="container mtb">
+>>>>>>> 85022b83c455d77ee10a2643774d0bab435c80e7
         <div class="row">
-            <h3>Upload Notice</h3>
-        </div><!-- /row -->
-    </div> <!-- /container -->
-</div><!-- /blue -->
 
+            <div class="col-lg-8">
+                <!-- Form Elements -->
 
-<!-- *****************************************************************************************************************
- PAGE CONTENT
- ***************************************************************************************************************** -->
+                <!-- <div class="panel panel-default"> -->
+                <!-- creating a form to accept user details-->
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="myForm">
+                            <form method="POST" action="" enctype='multipart/form-data'>
+                                <div class="form-group">
+                                    <label>Category</label>
+                                    <select class="form-control" id="catType" name="catType">
+                                        <?php displayCategories() ?>
+                                    </select>
+                                </div>
 
-<div class="container mtb">
-    <div class="row">
+                                <div class="form-group">
+                                    <label>Subject</label>
+                                    <input class="form-control" placeholder="Enter text" id="topic" name="subj">
+                                </div>
 
-        <div class="col-lg-8">
-            <!-- Form Elements -->
+                                <div class="form-group">
+                                    <label>Comment</label>
+                                    <textarea class="form-control" rows="3" id="comm" name="comment"></textarea>
+                                </div>
 
-            <!-- <div class="panel panel-default"> -->
+                                <div class="form-group">
+                                    <label>File input</label>
+                                    <input type="file" id="subFile" name="filename">
+                                </div>
 
-            <div class="panel-body">
-                <div class="row">
-                    <div class="myForm">
-                        <form method="POST" action="" enctype='multipart/form-data'>
-                            <div class="form-group">
-                                <label>Category</label>
-                                <select class="form-control" id="catType" name="catType">
-                                    <?php loadCategories(); ?>
-                                </select>
-                            </div>
+                                <div class="form-group">
+                                    <label>Send ad/post to</label>
+                                    <select class="form-control" id="notType" name="display">
+                                        <option value="0">Please Select One</option>
+                                        <option>PUBLIC</option>
+                                        <option>INSTITUTION</option>
+                                    </select>
+                                </div>
 
-                            <div class="form-group">
-                                <label>Subject</label>
-                                <input class="form-control" placeholder="Enter text" id="topic" name="subj">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Comment</label>
-                                <textarea class="form-control" rows="3" id="comm" name="comment"></textarea>
-                            </div>
-
-                            <div class="form-group">
-                                <label>File input</label>
-                                <input type="file" id="subFile" name="filename">
-                            </div>
-
-                            <div class="form-group">
-                                <!-- Due to constraints, we are limiting the notice type to images and texts only -->
-                                <label>Send ad/post to</label>
-                                <select class="form-control" id="notType" name="display">
-                                    <option value="0">Please Select One</option>
-                                    <option>PUBLIC</option>
-                                    <option>INSTITUTION</option>
-                                </select>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary btn-lg btn-block" id="subButton" name="submit" >Upload</button>
-                        </form>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block" id="subButton" name="submit" >Upload</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
+<<<<<<< HEAD
             </div>
             <!-- end page-wrapper -->
             <!-- </div> -->
@@ -109,7 +126,7 @@ require_once("../controller/uploadcontroller.php");
 </div><! --/container -->
 
 <?php
-require_once("../layout/footer.php");
+//require_once("../layout/footer.php");
 ?>
 
 <!-- Bootstrap core JavaScript
@@ -124,6 +141,38 @@ require_once("../layout/footer.php");
 <script src="../js/jquery.isotope.min.js"></script>
 <script src="../js/custom.js"></script>
 <script src="../js/ajax.js"></script>
+=======
+                <!-- end page-wrapper -->
+                <!-- </div> -->
+                <!-- end wrapper -->
+            </div><! --/col-lg-8 -->
+
+
+            <?php
+            require_once("../layout/sidebar.php");
+            ?>
+
+
+        </div><! --/row -->
+    </div><! --/container -->
+
+    <?php
+    require_once("../layout/footer.php");
+    ?>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/retina-1.1.0.js"></script>
+    <script src="../js/jquery.hoverdir.js"></script>
+    <script src="../js/jquery.hoverex.min.js"></script>
+    <script src="../js/jquery.prettyPhoto.js"></script>
+    <script src="../js/jquery.isotope.min.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/ajax.js"></script>
+>>>>>>> 85022b83c455d77ee10a2643774d0bab435c80e7
 
 </body>
 </html>

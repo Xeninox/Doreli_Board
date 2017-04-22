@@ -1,9 +1,9 @@
 <?php 
 
-/**
-*@author Isaac Coffie 
-*@version Version 1.0
-*/
+        /**
+        *@author Isaac Coffie 
+        *@version Version 1.0
+        */
 
         //include registration class 
 
@@ -27,6 +27,7 @@
             echo "admin registering";
             validateregisterinstitution();
           }
+
 
         /**
         *a function to Signup user
@@ -80,7 +81,7 @@
  
 
          /**
-          *a function to display signing up user status
+          *a function to display error or success message upon registration
           */
          function signupstatus()
          {
@@ -97,6 +98,37 @@
             }
          }
 
+      /**
+      *a function to clear input fields
+      */
+        function clearFormElements()
+        {
+              $_POST["uname"] = "";
+              $_POST["fname"] = "";
+              $_POST["lname"] = "";
+              $_POST["email"] = "";
+              $_POST["password"] = "";
+              $_POST["institution"] = "";
+              $_POST["image"] = "";
+
+        }
+
+     /**
+    *a function to upload user picture
+    *@param $filename filename of the input field
+    *@return $image upon successfull upload otherwise null  
+    */
+        function uploadProfilePicture($filename){
+          $image = null;
+          $tempImage = addslashes($_FILES[$filename]['tmp_name']);
+          $imageName = addslashes($_FILES[$filename]['name']);
+          $getimage = addslashes(file_get_contents($tempImage));
+          $image = base64_encode($getimage);
+          return $image;
+
+        }
+
+
 
          /**
           *a function to validate user inputs
@@ -109,12 +141,9 @@
              
                 //validate username
                 if (isset($_POST['uname']) && !empty($_POST["uname"])) {
-                    if((1 === preg_match('~[0-9]~', $_POST["uname"])) ||
-                     (1 === preg_match('~[^A-Za-z0-9]~', $_POST["uname"]))){                        
-                     
-                       $GLOBALS['nameError'] = "name must not contain numbers or symbols";
-                    
-                       $ok = false;
+                    if(0 === preg_match('/^[a-zA-Z0-9 _-]*$/', $_POST['uname'])){
+                      $GLOBALS['nameError'] = "name must contain numbers, letters, space, hyphen or underscore";
+                     $ok = false;
                     }
                     else {
                     $name = $_POST['uname'];                   
@@ -141,11 +170,9 @@
 
                 //validate first name
                 if (isset($_POST['fname']) && !empty($_POST["fname"])) {
-                    if(1 === preg_match('~[0-9]~', $_POST["fname"]) || 
-                        1 === preg_match('~[^A-Za-z0-9]~', $_POST["fname"])){
-                     
-                      $GLOBALS['fnameError'] = "fname must not contain numbers or symbols";
-                      $ok = false;
+                    if(0 === preg_match('/^[a-zA-Z0-9 _-]*$/', $_POST['fname'])){
+                      $GLOBALS['fnameError'] = "name must contain numbers, letters, space, hyphen or underscore";
+                     $ok = false;
                     }
                     else {
                     $fname = $_POST['fname'];
@@ -157,10 +184,8 @@
 
                 //validate last name
                 if (isset($_POST['lname']) && !empty($_POST["lname"])) {
-                    if(1 === preg_match('~[0-9]~', $_POST["lname"]) || 
-                        1 === preg_match('~[^A-Za-z0-9]~', $_POST["lname"])){
-                    
-                      $GLOBALS['lnameError'] = "name must not contain numbers or symbols";
+                    if(0 === preg_match('/^[a-zA-Z0-9 _-]*$/', $_POST['lname'])){
+                      $GLOBALS['lnameError'] = "name must contain numbers, letters, space, hyphen or underscore";
                      $ok = false;
                     }
                     else {
@@ -188,8 +213,7 @@
 
                 //validate institution
                 if (isset($_POST['institution']) && !empty($_POST["institution"])) {
-                    if($_POST["institution"] == "0"){
-                     
+                    if($_POST["institution"] == "none"){
                       $GLOBALS['institutionError'] = "Kindly select institution";
                      $ok = false;
                     }
@@ -202,34 +226,23 @@
                 }
 
                 //validate image
-                if (isset($_POST['image']) && !empty($_POST["image"])) {
-                    
-                    $image = $_POST['image'];
+                if(isset($_FILES['image']) && !empty($_FILES["image"]['tmp_name'])) {
+                  
+                    $image = uploadProfilePicture('image');
+                    if($image == null){
+                     $ok = false;
+                    }
                 } 
                 else{
                    $ok = false; 
-                   $GLOBALS['imageError'] = "Kindly select image";
+                   $GLOBALS['imageError'] = "Kindly select your image";
                 }
                 
               return $ok;
         }
 
-    /**
-    a function to clear input fields
-    */
-        function clearFormElements()
-        {
-            	$_POST["uname"] = "";
-            	$_POST["fname"] = "";
-            	$_POST["lname"] = "";
-            	$_POST["email"] = "";
-            	$_POST["password"] = "";
-            	$_POST["institution"] = "";
-            	$_POST["image"] = "";
-
-        }
-
-    /*
+    
+          /*
           a function to validate user inputs
           */
         function validateregisterinstitution() {
@@ -285,10 +298,13 @@
                     
                 
                 //validate institution logo
-                if (isset($_POST['logo']) && !empty($_POST["logo"]))
-                {   
-                  $logo = htmlspecialchars($_POST['logo']);
-                }
+                if(isset($_FILES['logo']) && !empty($_FILES["logo"]['tmp_name'])) {
+                  
+                    $logo = uploadProfilePicture('logo');
+                    if($logo == null){
+                     $ok = false;
+                    }
+                } 
 
                 else{
                       $ok = false;
@@ -371,9 +387,12 @@
 
                 
                 //validate image
-                if (isset($_POST['adminpic']) && !empty($_POST["adminpic"])) {
-                    
-                    $adminprofile = $_POST['adminpic'];
+                if(isset($_FILES['adminpic']) && !empty($_FILES["adminpic"]['tmp_name'])) {
+                  
+                    $adminprofile = uploadProfilePicture('adminpic');
+                    if($adminprofile == null){
+                     $ok = false;
+                    }
                 } 
                 else{
                    $ok = false; 
@@ -417,6 +436,8 @@
                   $status = 3;
                  } 
         }
+
+        
 
         
  ?>
