@@ -15,12 +15,12 @@
 
                 <?php
                 if($_SESSION['role'] == 1){
-                    echo "<li><a href=\"institution-ads.php\">MY INSTITUTION ADS</a></li>
+                    echo "
                 <li><a href=\"accept-users.php\">USER REQUEST</a></li>
                 <li><a href=\"admin-analysis.php\">ANALYSIS</a></li>";
                 }
                 ?>
-
+                <li><a href="institution-ads.php">MY INSTITUTION ADS</a></li>
                 <li><a href="upload.php">UPLOAD</a></li>
                 <li class="dropdown active">
                     <?php $encoded_image = base64_encode($_SESSION['profile_pic']);
