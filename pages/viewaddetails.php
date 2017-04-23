@@ -1,3 +1,9 @@
+<?php
+/**
+ *@author Isaac Coffie
+ *@version 1.0
+ */
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,19 +37,19 @@
 
 <body>
 
-<?php
+    <?php
 
-/**
- * @author: Isaac Coffie
- * @version 1.0
- */
+     /** 
+     * @author: Isaac Coffie
+     * @version 1.0
+     */
 
-include_once('../settings/core_ini.php');
-verifyUserLogin();
-include_once('../layout/adminheader.php');
-include_once('../layout/viewad.php');
-include_once('../layout/footer.php');
-?>
+    include_once('../settings/core_ini.php');
+        verifyUserLogin();
+    include_once('../layout/adminheader.php');
+    include_once('../layout/viewad.php'); 
+    include_once('../layout/inst-footer.php');
+    ?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>

@@ -22,6 +22,9 @@ class AdminFunctionClass extends DatabaseConnection
     }
 
 
+    function getNumUploads(){
+
+    }
 
     function getNumAccepted($institution_id){
         $num_accepted_query = "SELECT COUNT(*) FROM users WHERE status = 'ACTIVE' AND institution_id = '$institution_id'";

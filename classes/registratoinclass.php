@@ -9,19 +9,29 @@
 
 require_once("../database/dbconnectclass.php");
 
+/**
+*a class to handle registration
+*/
+
 class Registration extends DatabaseConnection
 {
 
-    //register a normal user
 
-    /*
-      a function to add new user into user account table
-     */
+    /**
+    *a function to add new user into user account table (registering a user)
+    *@param $name user name
+    *@param $fname user first name
+    *@param $lname user last name
+    *@param $email user email
+    *@param $pword user password
+    *@param $inst institution id
+    *@param $image user profile picture
+    *@param $role user role
+    *@param $status user status
+    *@return retruns true if registration was success and false otherwise
+    */
     function addNewUser($name, $fname, $lname, $email, $pword, $inst, $image, $role, $status){
 
-        //create an instance of DB connection
-        //$useraccount = new DatabaseConnection;
-        //hash password for security purpose
         $name = $this->sqlinjection($name);
         $fname = $this->sqlinjection($fname);
         $lname = $this->sqlinjection($lname);
@@ -30,36 +40,45 @@ class Registration extends DatabaseConnection
         $inst = $this->sqlinjection($inst);
         $role = $this->sqlinjection($role);
         $status = $this->sqlinjection($status);
+
+        //hash password for security purpose
         $hashedpword = password_hash($pword, PASSWORD_DEFAULT);
+
         //write query statement
         $queryStatement = "INSERT INTO users (username, firstname, lastname, email, password, institution_id, profile_picture, role, status) VALUES ('$name', '$fname', '$lname', '$email', '$hashedpword', '$inst', '$image','$role','$status')";
+
         // execute query
         $useraccount = $this->query($queryStatement);
 
         //if query was successful
         if($useraccount){
             return true;
-            // echo "<center><h3 style='color:green'>Insertion Successful "."</h3></center>" ;
-            //header("location:../login/");
+            
         }
         // if query wasnt successful
         else {
             return false;
-            //echo "<center><h3 style='color:red'> Insertion Unsuccessful ". "</h3></center>" ;
         }
-    }
+    }  // end of function
 
-// register an institution
-
-    /*
-     a function to add new institution
+    /**
+    *a function to add new user into user account table (registering a user)
+    *@param $name institution name
+    *@param $description brief description of institution
+    *@param $address institution address
+    *@param $contact institution email
+    *@param $logo institution logo
+    *@param $adminname institution admin username
+    *@param $adminprofile admin profile picture
+    *@param $adminlname admin  last name
+    *@param $adminemail admin email
+    *@param $adminpassword admin password
+    *@return retruns true if registration was success and false otherwise
     */
     function addNewInstitution($name, $description, $address, $contact, $logo, $adminname, $adminfname, $adminlname, $adminemail, $adminpassword, $adminprofile){
 
         $successful = false;
 
-        //create an instance of DB connection
-        //$dbinstitution = new DatabaseConnection;
         //write query statement
         $queryStatement = "INSERT INTO institution (name, description, address, contact, logo) VALUES ('$name', '$description', '$address', '$contact', '$logo')";
 
@@ -69,7 +88,6 @@ class Registration extends DatabaseConnection
         //if adding institution was successful
         if($queryresult){
             $successful = true;
-            //echo "<center><h3 style='color:green'> Institution Insertion Successful "."</h3></center>" ;
 
             //proceed to register the admin
             $sql = "SELECT * FROM institution WHERE name = '$name' LIMIT 1";
@@ -87,48 +105,42 @@ class Registration extends DatabaseConnection
                 if($addingresult == true) {
                     $successful = true;
                 }
-
-                //echo "<center><h3 style='color:green'> Admin Insertion Successful "."</h3></center>" ;
             }
 
 
         }
-        //header("location:../login/");
-
-        /* if query wasnt successful
-        else {
-             echo "<center><h3 style='color:red'> Insertion Unsuccessful ". "</h3></center>" ;
-        }*/
         return $successful;
-    }
+    }  // end of function
 
-//check if username is valid or already exists
-    /*
-       a function to validate username
-       it checks if username exists in database
-       it returns true if yes and false otherwise
-      */
+    /**
+    *a function to checks if username exists in database
+    *@param $name user name
+    *@return returns true if name exists in db and false otherwise
+    */
     function usernameexist($name){
         $success = false;
-        //$userdb = new DatabaseConnection;
+        
         $queryStatement = "SELECT * FROM users";
         $alluseraccount = $this->query($queryStatement);
 
         if($alluseraccount){
             while ($value = $this->fetch()) {
                 if($value['username'] == $name){
-                    $success = true;
-                    //$GLOBALS['nameTaken'] = "username already exist";
+                    $success = true;    
                 }
             }
         }
         return $success;
-    }
+    }  // end of function
 
-//check if insitution name is valid or already exists
+   /**
+    *a function to checks if institution name exists in database
+    *@param $instname institution name
+    *@return returns true if name exists in db and false otherwise
+    */
     function institutionnameexist($instname){
         $success = false;
-        // $institutiondb = new DatabaseConnection;
+       
         $queryStatement = "SELECT * FROM institution";
         $queryresult = $this->query($queryStatement);
 
@@ -136,23 +148,28 @@ class Registration extends DatabaseConnection
             while ($value = $this->fetch()) {
                 if($value['name'] == $instname){
                     $success = true;
-                    //$GLOBALS['nameTaken'] = "institution name already exist";
+                    
                 }
             }
         }
         return $success;
-    }
+    }  // end of function
 
-    //sql injection
-
+    
+   /**
+    *a function to handle sql injection
+    *@param $string string data
+    *@return returns escapred data or null if error occurs
+    */
     function sqlinjection($string){
 
         $data = mysqli_real_escape_string($this->getconnection(), $string);
         return $data;
-    }
+    }  // end of function
 
-    /*
-       a function to load all majors from database
+      /**
+       *a function to load all majors from database
+       *@return returns all institution name array in html dropdown
        */
     function loadInstitution() {
         //$loadmajor = new DatabaseConnection;
@@ -166,10 +183,8 @@ class Registration extends DatabaseConnection
             }
         }
 
-    }
+    }  // end of function
 
-}
-/*$user = new Registration;
- var_dump($user->addNewUser("pampa1", "loli", "NAME", "bolit", "password’ OR 1=1", 5, "image2wbmp", 2, "INACTIVE")); 
-*/
+} // end of class 
+
 ?>

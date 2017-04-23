@@ -27,15 +27,5 @@ class InstitutionAds extends DatabaseConnection
         return $this->query($num_upload);
     }
 
-    function getCategoryAds($cat_id){
-        $cat_ads = "SELECT * FROM ads WHERE cat_id = '$cat_id'";
-        return $this->query($cat_ads);
-    }
-
-    function getCategoryAdsForPublic($cat_id){
-        $cat_ads = "SELECT * FROM ads WHERE cat_id = '$cat_id' AND institution_id = 1";
-        return $this->query($cat_ads);
-    }
-
 
 }

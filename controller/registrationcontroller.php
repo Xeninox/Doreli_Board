@@ -8,6 +8,7 @@
         //include registration class 
 
         require_once("../classes/registratoinclass.php");
+
         //declare variables to store data from form elements
         $name; $pword; $image; $fname; $lname; $institution; $email; $status;
 
@@ -31,6 +32,7 @@
 
         /**
         *a function to Signup user
+        *it returns success or error message after trying to register user
         */
 
         function signup()
@@ -45,13 +47,13 @@
             	// check if username is okay to use
         		if($user->usernameexist($GLOBALS['name']) == false) {
 
-                        //set permission priviledges and finally register user
-                        $role = 2; 
-                        $status = "INACTIVE";
+              //set permission priviledges and finally register user
+              $role = 2; 
+              $userstatus = "INACTIVE";
 
                       // call addnewuser function from Registration class 
                       // set status to 1 if adding was successful and 2 if there was an error
-                   if($user->addNewUser($GLOBALS['name'], $GLOBALS['fname'], $GLOBALS['lname'], $GLOBALS['email'], $GLOBALS['pword'], $GLOBALS['institution'], $GLOBALS['image'], $role, $status))
+                   if($user->addNewUser($GLOBALS['name'], $GLOBALS['fname'], $GLOBALS['lname'], $GLOBALS['email'], $GLOBALS['pword'], $GLOBALS['institution'], $GLOBALS['image'], $role, $userstatus))
                     {
                    	 $status = 1;  
                    	 clearFormElements(); // clear content from form
@@ -86,15 +88,15 @@
          function signupstatus()
          {
             if (!empty($GLOBALS['status']) && $GLOBALS['status'] == 1) {
-            	echo "<center><h3 style='color:green'>Insertion Successful </h3></center> <br>
-            	<h5>You will be redirected to login pages in 5 seconds<h5>";
-                header("Refresh: 5; URL=../login/login.php");
+            	echo "<center><h2 style='color:green'>Registration Successful </h2></center> <br>
+            	<h4 style='color:green'>You will be redirected to login pages in 5 seconds<h4>";
+                header("Refresh:5; URL=../login/login.php");
             }
             else if (!empty($GLOBALS['status']) && $GLOBALS['status'] == 2) {
-                echo "<center><h3 style='color:red'> Insertion Unsuccessful </h3></center>" ;
+                echo "<center><h2 style='color:red'> Registration Unsuccessful </h2></center>" ;
             }
             else if (!empty($GLOBALS['status']) && $GLOBALS['status'] == 3) {
-                echo "<center><h3 style='color:red'> Validation Unsuccessful. Kindly provide valid data </h3></center>" ;
+                echo "<center><h2 style='color:red'> Validation Unsuccessful. Kindly provide valid data </h3></center>" ;
             }
          }
 
@@ -109,11 +111,10 @@
               $_POST["email"] = "";
               $_POST["password"] = "";
               $_POST["institution"] = "";
-              $_POST["image"] = "";
-
+              $_POST["image"] = ""; 
         }
 
-     /**
+    /**
     *a function to upload user picture
     *@param $filename filename of the input field
     *@return $image upon successfull upload otherwise null  
@@ -123,9 +124,8 @@
           $tempImage = addslashes($_FILES[$filename]['tmp_name']);
           $imageName = addslashes($_FILES[$filename]['name']);
           $getimage = addslashes(file_get_contents($tempImage));
-          $image = base64_encode($getimage);
+          $image = base64_encode($tempImage);
           return $image;
-
         }
 
 

@@ -19,7 +19,7 @@
          }
 
          /**
-         *a function to fetch ad details from database based on the ads id
+         *a function to fetch ad details from database based on the ad's id
          *@return returns ad array object if successful and null is not successful
          */
 
@@ -38,7 +38,7 @@
          }
 
          /**
-         *a function to return the name of the user who uploaded that particular
+         *a function to return the name of the user who uploaded that particular ad
          *@return returns an ad array object if successful and null is not successful
          */
 

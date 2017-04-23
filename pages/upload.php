@@ -48,13 +48,12 @@ require_once("../controller/uploadcontroller.php");
         <div class="container mtb">
             <div class="row">
 
-                <div class="col-lg-8">
+                <div class="col-md-8">
                     <!-- Form Elements -->
 
                     <!-- <div class="panel panel-default"> -->
                     <!-- creating a form to accept user details-->
                     <div class="panel-body">
-                        <div class="row">
                             <div class="myForm">
                                 <form method="POST" action="" enctype='multipart/form-data'>
                                     <div class="form-group">
@@ -92,21 +91,57 @@ require_once("../controller/uploadcontroller.php");
                                 </form>
                             </div>
                         </div>
-                    </div>
-                </div>
+                
                 <!-- end page-wrapper -->
                 <!-- </div> -->
                 <!-- end wrapper -->
             </div><! --/col-lg-8 -->
+       <div class="col-lg-4 col-md-4">
 
+       <?php uploadstatus(); ?>
 
-
+       </div>
         </div><! --/row -->
     </div><! --/container -->
 
     <?php
-        require_once("../layout/footer.php");
+        //require_once("../layout/footer.php");
     ?>
+    <!-- *****************************************************************************************************************
+     FOOTER
+     ***************************************************************************************************************** -->
+     <div id="footerwrap">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>About Doreli</h4>
+                <div class="hline-w"></div>
+                <p>Doreli Board is an online advertising board that is used by any institution to transmit information to its members. Doreli Board has made it easier to transmit information in the company by alerting members of the company whenever a message is sent.</p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Social Links</h4>
+                <div class="hline-w"></div>
+                <p>
+                    <a href=""><i class="fa fa-dribbble"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-tumblr"></i></a>
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Our Address</h4>
+                <div class="hline-w"></div>
+                <p>
+                    Ashesi University College<br/>
+                    1 University Avenue,<br/>
+                    Berekuso Ghana.<br/>
+                </p>
+            </div>
+
+        </div><! --/row -->
+    </div><! --/container -->
+     </div><!--/footerwrap -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

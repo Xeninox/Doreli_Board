@@ -3,9 +3,9 @@
  *@author Chris Asante
  *@version 1.0
  */
-
+ 
 	//call the class
-	require_once("../classes/processupload.php");
+	require_once("../classes/processuploadclass.php");
 
 	//$_SESSION checks for all sessions to see if it's available
 	if (isset($_SESSION))
@@ -110,6 +110,7 @@
 	{
  		global $userId;
  		global $instId;
+        global $status;
 
         //calling an instancee of the upload class
 		$insertNotice = new upload;
@@ -118,15 +119,13 @@
 
 		if ($output)
        	{
-       	    if ($display == "PUBLIC")
-                header( "Location:../pages/newpublicpage.php" );
-       	    else if ($display == "INSTITUTION")
-                header( "Location:../pages/institution-ads.php" );
+            $status = 1;
+            
        	}
 
        	else
        	{
-       		echo "<center><h3 style='color:red'> Upload Failed </h3></center>" ;
+       		$status = 2;
        	}
 	}
 
@@ -167,6 +166,21 @@
 		$getimage = addslashes(file_get_contents($tempname));
 		return $getimage;
 	}
+/**
+          *a function to display error or success message upon upload
+          */
+         function uploadstatus()
+         {
+            if (!empty($GLOBALS['status']) && $GLOBALS['status'] == 1) {
+                echo "<center><h2 style='color:green'>Upload Ad Successful </h2></center> <br>
+                <h3 style='color:green'>You will be redirected to institution pages in 5 seconds<h3>";
+                header("Refresh: 5; URL=institution-ads.php");
+            }
+            else if (!empty($GLOBALS['status']) && $GLOBALS['status'] == 2) {
+                echo "<center><h2 style='color:red'> Upload Unsuccessful. Please try again!!! </h2></center>" ;
+            }
+            
+         }
 
 
 

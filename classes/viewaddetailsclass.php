@@ -15,7 +15,7 @@ class ViewAdDetails extends DatabaseConnection
     /**
      *a function to get the details of an ad
      *@param $ad_id the id of an ad (poster)
-     *@return returns true if successful and false if not successful
+     *@return returns true it successfully returns an ad and false if not successful
      */ 
 	function getAdDetails($ad_id){
 		$sql = "SELECT * FROM ads WHERE id = '$ad_id' LIMIT 1";
@@ -28,7 +28,7 @@ class ViewAdDetails extends DatabaseConnection
 	}
 
     /**
-     *a function to get the username of an ad
+     *a function to get the user who posted the ad
      *@param $ad_id the id of an ad (poster)
      *@return returns true if successful and false if not successful
      */ 

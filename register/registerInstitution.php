@@ -43,15 +43,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="">Doreli.</a>
+          <a class="navbar-brand" href="../">Doreli.</a>
         </div>
         <div class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="">HOME</a></li>
-            <li><a href="">ABOUT</a></li>
-            <li><a href="">CONTACT</a></li>
+            <li><a href="../">HOME</a></li>
+            <li><a href="../pages/about.php">ABOUT</a></li>
+            <li><a href="../pages/contact.php">CONTACT</a></li>
+            <<li><a href="../login/login.php">LOGIN</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">PAGES <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">MORE <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="signup.php">JOIN INSTITUTION</a></li>
               </ul>
@@ -168,36 +169,36 @@
 	 FOOTER
 	 ***************************************************************************************************************** -->
 	 <div id="footerwrap">
-	 	<div class="container">
-		 	<div class="row">
-		 		<div class="col-lg-4">
-		 			<h4>About</h4>
-		 			<div class="hline-w"></div>
-		 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-		 		</div>
-		 		<div class="col-lg-4">
-		 			<h4>Social Links</h4>
-		 			<div class="hline-w"></div>
-		 			<p>
-		 				<a href="#"><i class="fa fa-dribbble"></i></a>
-		 				<a href="#"><i class="fa fa-facebook"></i></a>
-		 				<a href="#"><i class="fa fa-twitter"></i></a>
-		 				<a href="#"><i class="fa fa-instagram"></i></a>
-		 				<a href="#"><i class="fa fa-tumblr"></i></a>
-		 			</p>
-		 		</div>
-		 		<div class="col-lg-4">
-		 			<h4>Our Bunker</h4>
-		 			<div class="hline-w"></div>
-		 			<p>
-		 				Some Ave, 987,<br/>
-		 				23890, New York,<br/>
-		 				United States.<br/>
-		 			</p>
-		 		</div>
-		 	
-		 	</div><!--/row -->
-	 	</div><!--/container -->
+	 <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>About Doreli</h4>
+                <div class="hline-w"></div>
+                <p>Doreli Board is an online advertising board that is used by any institution to transmit information to its members. Doreli Board has made it easier to transmit information in the company by alerting members of the company whenever a message is sent.</p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Social Links</h4>
+                <div class="hline-w"></div>
+                <p>
+                    <a href=""><i class="fa fa-dribbble"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-tumblr"></i></a>
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Our Address</h4>
+                <div class="hline-w"></div>
+                <p>
+                    Ashesi University College<br/>
+                    1 University Avenue,<br/>
+                    Berekuso Ghana.<br/>
+                </p>
+            </div>
+
+        </div><! --/row -->
+    </div><! --/container -->
 	 </div><!--/footerwrap -->
 	 
     <!-- Bootstrap core JavaScript

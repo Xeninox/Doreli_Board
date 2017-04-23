@@ -2,11 +2,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <h4>About Us</h4>
+                <h4>About</h4>
                 <div class="hline-w"></div>
-                <p>Doreli is an online advertising company that assists organisations to transmit information to its members.
-                    The company was created by Dorcas Elikem Doe,   Constant Likudie , Selassie Golloh , Chris Asante and Isaac Coffie,
-                    all third-year students of Ashesi University College.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
             </div>
             <div class="col-lg-4">
                 <h4>Social Links</h4>
@@ -20,12 +18,12 @@
                 </p>
             </div>
             <div class="col-lg-4">
-                <h4>Our Address</h4>
+                <h4>Our Bunker</h4>
                 <div class="hline-w"></div>
                 <p>
-                    1 University Avenue, Berekuso;<br/>
-                    PMB CT 3, Cantonments,<br/>
-                    Accra, Ghana.<br/>
+                    Some Ave, 987,<br/>
+                    23890, New York,<br/>
+                    United States.<br/>
                 </p>
             </div>
 

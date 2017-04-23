@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
 
-    <title>Doreli Board - Accept Users</title>
+    <title>Doreli Board - Institution ads</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
@@ -41,6 +41,7 @@ include_once('../settings/core_ini.php');
 ?>
 <?php include_once('../layout/adminheader.php'); ?>
 <?php include_once('../layout/instads.php'); ?>
+<?php include_once('../layout/inst-footer.php'); ?>
 
 
 

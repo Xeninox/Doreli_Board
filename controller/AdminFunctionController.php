@@ -1,13 +1,10 @@
 <?php
-
-include_once('../classes/AdminFunctionClass.php');
 /**
  * Created by PhpStorm.
  * @author: Constant Likudie
  * @version 1.0
  */
-
-
+include_once('../classes/AdminFunctionClass.php');
 
 if (isset($_SESSION)){
     $institution_id = $_SESSION['institution_id'];
