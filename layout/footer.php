@@ -1,3 +1,4 @@
+
 <div id="footerwrap" style="position: absolute; right: 0; bottom: 0; left: 0; padding: 1rem; text-align: center;">
     <div class="container">
         <div class="row">
@@ -29,4 +30,4 @@
 
         </div><! --/row -->
     </div><! --/container -->
-</div><! --/footerwrap -->
+</div>
