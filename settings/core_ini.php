@@ -1,38 +1,19 @@
 <?php
-/*
+/**
+ * Created by PhpStorm.
+ * @author: Constant Likudie
+ * @version 1.0
+ */
 session_start();
-
+ob_start();
 
 function verifyUserLogin(){
-// check for login and permission
-    if (isset($_SESSION['userid']) && !empty($_SESSION['userid'])){
+    // check for login and permission
+    if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){
 
     } else {
-// redirect to login if the user is not valid
-        header('Location:login/index.php');
+        // redirect to login if the user is not valid
+        header('Location:../login/login.php');
     }
 }
-
-// get the user specfic header
-function getUserHeader(){
-    if ($_SESSION['per_id'] == 1){
-        require_once('layout/adminheader.php');
-    } else if ($_SESSION['per_id'] == 2) {
-        require_once('layout/standardheader.php');
-    }
-}
-
-
-// get current page
-
-//get previous page
-
-// ob start for headers
-
-//call layout base on permission
-
-//other functions
-
-
-*/
 ?>

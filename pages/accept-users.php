@@ -30,7 +30,16 @@
 </head>
 
 <body>
-<?php include_once('../controller/AdminFunctionController.php') ?>
+<?php
+/**
+ * Created by PhpStorm.
+ * @author: Constant Likudie
+ * @version 1.0
+ */
+include_once('../settings/core_ini.php');
+verifyUserLogin();
+?>
+<?php include_once('../controller/AdminFunctionController.php'); ?>
 <?php include_once('../layout/adminheader.php'); ?>
 <?php include_once('../layout/acceptance.php'); ?>
 <?php include_once('../layout/footer.php'); ?>
@@ -39,13 +48,6 @@
 
 
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/retina-1.1.0.js"></script>

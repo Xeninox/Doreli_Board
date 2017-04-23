@@ -45,24 +45,22 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Doreli.</a>
+          <a class="navbar-brand" href="../">Doreli Board</a>
         </div>
         <div class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="../">HOME</a></li>
+            <li><a href="../pages/about.php">ABOUT</a></li>
+            <li><a href="../pages/contact.php">CONTACT</a></li>
+            <li><a href="../login/login.php">LOGIN</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">PAGES <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">MORE <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="blog.html">BLOG</a></li>
-                <li><a href="single-post.html">SINGLE POST</a></li>
-                <li><a href="portfolio.html">PORTFOLIO</a></li>
-                <li><a href="single-project.html">SINGLE PROJECT</a></li>
+                <li><a href="registerInstitution.php">REGISTER INSTITUTION</a></li>
               </ul>
             </li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </div>
 
@@ -79,18 +77,18 @@
 	              	<div>
 	              		<!-- display signup error or success message -->
                          <?php signupstatus();?>
-                         
+
 	              	</div>				
 				</div>
 				<div class="col-md-4 col-sm-6">
                 <div class="login-panel panel panel-default" style="background-color: transparent">                  
                     <div class="panel-heading">
-                        <h3 class="panel-title" style="color: #fff">Please Sign Up</h3>
+                        <h3 class="panel-title" style="color: black">Please Sign Up</h3>
                     </div>
                     <div class="panel-body"> 
 
 
-                        <form method="POST" action="">
+                        <form method="POST" action="" enctype="multipart/form-data">
                             <fieldset>
 
                                 <div class="form-group">                       
@@ -126,7 +124,7 @@
 
                                 <div class="form-group">                       
                                 <select id="drop" class="form-control" name="institution">
-                                <option value="0">Select Institution</option>
+                                <option value="none">Select Institution</option>
                                <!-- Load from database -->
                                 <?php populateInstitution();?>
                                 </select>
@@ -141,7 +139,7 @@
                                 </div>      
 
                                 <button name="register" type="submit" class="btn btn-lg btn-primary btn-block">Sign Up</button><br>
-                                <a href="../login.php" style="color: #fff; text-align: center; font-size: 100%">Already a Member? Sign in</a>
+                                <a href="../login/login.php" style="color: #fff; text-align: center; font-size: 100%">Already a Member? Sign in</a>
 
                             </fieldset>
                         </form>
@@ -160,35 +158,35 @@
 	 ***************************************************************************************************************** -->
 	 <div id="footerwrap">
 	 	<div class="container">
-		 	<div class="row">
-		 		<div class="col-lg-4">
-		 			<h4>About</h4>
-		 			<div class="hline-w"></div>
-		 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-		 		</div>
-		 		<div class="col-lg-4">
-		 			<h4>Social Links</h4>
-		 			<div class="hline-w"></div>
-		 			<p>
-		 				<a href="#"><i class="fa fa-dribbble"></i></a>
-		 				<a href="#"><i class="fa fa-facebook"></i></a>
-		 				<a href="#"><i class="fa fa-twitter"></i></a>
-		 				<a href="#"><i class="fa fa-instagram"></i></a>
-		 				<a href="#"><i class="fa fa-tumblr"></i></a>
-		 			</p>
-		 		</div>
-		 		<div class="col-lg-4">
-		 			<h4>Our Bunker</h4>
-		 			<div class="hline-w"></div>
-		 			<p>
-		 				Some Ave, 987,<br/>
-		 				23890, New York,<br/>
-		 				United States.<br/>
-		 			</p>
-		 		</div>
-		 	
-		 	</div><!--/row -->
-	 	</div><!--/container -->
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>About Doreli</h4>
+                <div class="hline-w"></div>
+                <p>Doreli Board is an online advertising board that is used by any institution to transmit information to its members. Doreli Board has made it easier to transmit information in the company by alerting members of the company whenever a message is sent.</p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Social Links</h4>
+                <div class="hline-w"></div>
+                <p>
+                    <a href=""><i class="fa fa-dribbble"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-tumblr"></i></a>
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Our Address</h4>
+                <div class="hline-w"></div>
+                <p>
+                    Ashesi University College<br/>
+                    1 University Avenue,<br/>
+                    Berekuso Ghana.<br/>
+                </p>
+            </div>
+
+        </div><! --/row -->
+    </div><! --/container -->
 	 </div><!--/footerwrap -->
 	 
     <!-- Bootstrap core JavaScript
@@ -203,88 +201,5 @@
   	<script src="../js/jquery.isotope.min.js"></script>
   	<script src="../js/custom.js"></script>
 
-
-    <script>
-// Portfolio
-(function($) {
-	"use strict";
-	var $container = $('.portfolio'),
-		$items = $container.find('.portfolio-item'),
-		portfolioLayout = 'fitRows';
-		
-		if( $container.hasClass('portfolio-centered') ) {
-			portfolioLayout = 'masonry';
-		}
-				
-		$container.isotope({
-			filter: '*',
-			animationEngine: 'best-available',
-			layoutMode: portfolioLayout,
-			animationOptions: {
-			duration: 750,
-			easing: 'linear',
-			queue: false
-		},
-		masonry: {
-		}
-		}, refreshWaypoints());
-		
-		function refreshWaypoints() {
-			setTimeout(function() {
-			}, 1000);   
-		}
-				
-		$('nav.portfolio-filter ul a').on('click', function() {
-				var selector = $(this).attr('data-filter');
-				$container.isotope({ filter: selector }, refreshWaypoints());
-				$('nav.portfolio-filter ul a').removeClass('active');
-				$(this).addClass('active');
-				return false;
-		});
-		
-		function getColumnNumber() { 
-			var winWidth = $(window).width(), 
-			columnNumber = 1;
-		
-			if (winWidth > 1200) {
-				columnNumber = 5;
-			} else if (winWidth > 950) {
-				columnNumber = 4;
-			} else if (winWidth > 600) {
-				columnNumber = 3;
-			} else if (winWidth > 400) {
-				columnNumber = 2;
-			} else if (winWidth > 250) {
-				columnNumber = 1;
-			}
-				return columnNumber;
-			}       
-			
-			function setColumns() {
-				var winWidth = $(window).width(), 
-				columnNumber = getColumnNumber(), 
-				itemWidth = Math.floor(winWidth / columnNumber);
-				
-				$container.find('.portfolio-item').each(function() { 
-					$(this).css( { 
-					width : itemWidth + 'px' 
-				});
-			});
-		}
-		
-		function setPortfolio() { 
-			setColumns();
-			$container.isotope('reLayout');
-		}
-			
-		$container.imagesLoaded(function () { 
-			setPortfolio();
-		});
-		
-		$(window).on('resize', function () { 
-		setPortfolio();          
-	});
-})(jQuery);
-</script>
   </body>
 </html>

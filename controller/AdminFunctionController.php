@@ -1,21 +1,20 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Constant Likudie
- * Date: 05/04/2017
- * Time: 12:13 PM
+ * @author: Constant Likudie
+ * @version 1.0
  */
-
 include_once('../classes/AdminFunctionClass.php');
 
 if (isset($_SESSION)){
-
+    $institution_id = $_SESSION['institution_id'];
 }
 
 
-function getAllInactiveUsers($admin_inst_id){
+function getAllInactiveUsers(){
+    global $institution_id;
     $admin = new AdminFunctionClass();
-    $admin->getAllNewUsers($admin_inst_id);
+    $admin->getAllNewUsers($institution_id);
     return $admin->fetchResultObject();
 }
 
@@ -32,20 +31,23 @@ function rejectUser($user_id){
 }
 
 function getNumAcceptedUsers(){
+    global $institution_id;
     $admin = new AdminFunctionClass();
-    $admin->getNumAccepted();
+    $admin->getNumAccepted($institution_id);
     return $admin->fetch();
 }
 
 function getNumRejectedUsers(){
+    global $institution_id;
     $admin = new AdminFunctionClass();
-    $admin->getNumRejected();
+    $admin->getNumRejected($institution_id);
     return $admin->fetch();
 }
 
 function getNumInactiveUsers(){
+    global $institution_id;
     $admin = new AdminFunctionClass();
-    $admin->getNumInactive();
+    $admin->getNumInactive($institution_id);
     return $admin->fetch();
 }
 
