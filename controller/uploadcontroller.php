@@ -144,7 +144,7 @@
         if ($adresult)
         {
             echo'
-            <option>Please select</option>';
+            <option value = "0">Please select</option>';
             while($row = $userPosts->fetch())
             {
                 echo '
