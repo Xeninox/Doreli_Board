@@ -42,8 +42,17 @@ include_once('../controller/userDetailsController.php');
  include_once('../layout/adminheader.php'); 
  $array = getUserDetails();
  ?>
+<div class="container mtb" style="background-color: #00b3fe">
+<div class="row">
+<div class="col-md-6" style="margin-top: 2%">
+<div class="panel panel-info">
+<div class="panel-heading">
+<center><h1>User Profile Details</h1></center>
+	
+</div>
+<div class="panel-body">
+	
 
-<div class="col-lg-6" style="margin-top: 5%">
 <?php 
 foreach($array as $item){
 $username = $item['username'];
@@ -54,11 +63,15 @@ $password = $item['password'];
 $ppic = $item['profile_picture'];
 $encoded_image = base64_encode($ppic);
 
-echo "<p><img class=\"img-responsive img-circle\" style=\"height:350px;\" src=\"data:image;base64, {$encoded_image}\"></p>
-<p>Username : $username</p> 
-<p>First name: $firstname</p>
-<p>Last name : $lastname</p>
-<p>Email : $email</p> ";
+  echo "
+    <img src=\"../image/post01.jpg\" style=\"height: 350px;\" class=\"img-responsive img-circle\">
+     <p><!--img class=\"img-responsive\" src=\"data:image;base64, {$encoded_image}\"--></p>
+<center><br>
+<h4>Username : $username</h4> 
+<h4>First name: $firstname</h4>
+<h4>Last name : $lastname</h4>
+<h4>Email : $email</h4>
+</center><br>";
 }
 
 ?>
@@ -66,17 +79,23 @@ echo "<p><img class=\"img-responsive img-circle\" style=\"height:350px;\" src=\"
 	<button type="submit" class="btn btn-lg btn-primary btn-block" name="edit">Edit Profile</button><br>
 
 <button type="submit" class="btn btn-lg btn-danger btn-block" name="delete">Delete</button><br>
-</div>
 </form>
+</div>
+</div>
+	
+</div>
 
+<div class="col-md-6">
 <?php 
 if(isset($_POST['edit'])){
 
 echo '
-<div class="col-lg-6" style="margin-top: 5%">
-	<div class="panel-heading">
-		<h3 class="panel-title" style="color: #fff">Update Information</h3>
-	</div>
+	<div class="panel panel-info" style="margin-top: 4%" >
+<div class="panel-heading">
+<h3 class="panel-title" style="color: #fff">Update Information</h3>
+	
+</div>
+
 	<div class="panel-body"> 
 
 		<form method="POST" action="">
@@ -121,7 +140,9 @@ echo '
 
 
 			</fieldset>
-		</form>  
+		</form> 
+		</div> 
+		</div> 
 ';
 }
  ?>
@@ -132,6 +153,7 @@ getUserDetails();
 
 ?>
 	</div>
+</div>
 </div>
 
 	
