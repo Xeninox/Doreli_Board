@@ -21,7 +21,7 @@ class ManageAds extends DatabaseConnection
         //$mydb = new dbconnection;
 
         //sql statement
-        $mysql = "select * from ads WHERE institution_id = 1";
+        $mysql = "select * from ads WHERE institution_id = 1 ORDER BY id DESC";
 
         //execute the query
         return $this->query($mysql);

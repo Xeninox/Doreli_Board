@@ -5,6 +5,7 @@
  * @version 1.0
  */
 session_start();
+ob_start();
 
 function verifyUserLogin(){
     // check for login and permission
