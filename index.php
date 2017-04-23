@@ -81,7 +81,7 @@
  					<p><br/><a href="register/signup.php" class="btn btn-theme btn-block">Signup Now</a></p>
  				</div>
  				<div class="col-md-4">
- 					<p><br/><a href="login/login.php" class="btn btn-theme btn-block">Or Login in</a></p>
+ 					<p><br/><a href="login/login.php" class="btn btn-theme btn-block">Or Login</a></p>
  				</div>
 			</div><!-- /row -->
 	    </div> <!-- /container -->
