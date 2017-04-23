@@ -81,14 +81,14 @@ require_once("../controller/uploadcontroller.php");
 
                                     <div class="form-group">
                                         <label>Send ad/post to</label>
-                                        <select class="form-control" id="notType" name="display">
+                                        <select class="form-control" id="dispAd" name="display">
                                             <option value="0">Please Select One</option>
                                             <option>PUBLIC</option>
                                             <option>INSTITUTION</option>
                                         </select>
                                     </div>
 
-                                    <button type="submit" class="btn btn-primary btn-lg btn-block" id="subButton" name="submit" >Upload</button>
+                                    <button type="submit" class="btn btn-primary btn-lg btn-block" id="subButton" name="submit" onclick="validateForm()">Upload</button>
                                 </form>
                             </div>
                         </div>
@@ -120,6 +120,7 @@ require_once("../controller/uploadcontroller.php");
     <script src="../js/jquery.isotope.min.js"></script>
     <script src="../js/custom.js"></script>
     <script src="../js/ajax.js"></script>
+    <script type="text/javascript" src="../js/uploadscript.js"></script>
     <!-- end page-wrapper -->
     <!-- </div> -->
     <!-- end wrapper -->
