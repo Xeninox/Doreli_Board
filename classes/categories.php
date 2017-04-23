@@ -9,6 +9,10 @@ require_once('../database/dbconnectclass.php');
 class categories extends DatabaseConnection
 {
 
+    /**
+     * This function gets all the categories in the data
+     * @return boolean the result of the query
+     */
     function getAllCategories(){
         $select_categories = "SELECT * FROM categories";
         return $this->query($select_categories);

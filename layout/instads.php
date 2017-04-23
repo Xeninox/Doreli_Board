@@ -1,4 +1,5 @@
 <?php  require_once('../controller/InstitutionAdsController.php');
+require_once('../controller/CategoriesController.php');
 $user_inst_array = getUserInstituion();
 $user_inst = $user_inst_array['name'];
 echo "<div id=\"blue\">
@@ -12,44 +13,44 @@ echo "<div id=\"blue\">
 
 
 
-<!-- *****************************************************************************************************************
- BLOG CONTENT
- ***************************************************************************************************************** -->
+    <!-- *****************************************************************************************************************
+     BLOG CONTENT
+     ***************************************************************************************************************** -->
 
-<div class="container mtb">
-    <div class="row">
+    <div class="container mtb">
+        <div class="row">
 
-        <! --POSTS LIST -->
-        <div class="col-lg-7 col-md-7">
+            <! --POSTS LIST -->
+            <div class="col-lg-8" id="con">
 
-            <?php ;
-            $num_upload = getNumUploadForInstitution();
-            $actual_num_upload = $num_upload["COUNT(*)"];
-            if ($actual_num_upload == 0){
-                echo "<h4 style='color: black;'>Sorry, We have No Ads At This Time</h4>";
-                echo "<img src=\"../image/sad.png\" style='height: 250px;'>";
-            } else {
-                $array = getAllInstutionAds();
-                foreach ($array as $item) {
-                    $ad_id = $item['id'];
-                    $category = $item['cat_id'];
-                    $subject = $item['subject'];
-                    $comment = $item['comment'];
-                    $poster = $item['ad_file'];
-                    $encoded_image = base64_encode($poster);
-                    $date = $item['date_added'];
-                    $user_id = $item['user_id'];
-                    $username_array = getUsername();
-                    $username = $username_array['username'];
-                    $newdate = date('d F Y', strtotime($date));
+                <?php ;
+                $num_upload = getNumUploadForInstitution();
+                $actual_num_upload = $num_upload["COUNT(*)"];
+                if ($actual_num_upload == 0){
+                    echo "<h4 style='color: black;'>Sorry, We have No Ads At This Time</h4>";
+                    echo "<img src=\"../image/sad.png\" style='height: 250px;'>";
+                } else {
+                    $array = getAllInstutionAds();
+                    foreach ($array as $item) {
+                        $ad_id = $item['id'];
+                        $category = $item['cat_id'];
+                        $subject = $item['subject'];
+                        $comment = $item['comment'];
+                        $poster = $item['ad_file'];
+                        $encoded_image = base64_encode($poster);
+                        $date = $item['date_added'];
+                        $user_id = $item['user_id'];
+                        $username_array = getUsername();
+                        $username = $username_array['username'];
+                        $newdate = date('d F Y', strtotime($date));
 
-                    echo "
+                        echo "
             <! -- Post 1 -->
             <!-- You can use this code at the php part to display the reults. Provide the subject, picture,
             date posted, username of user who posted and the comment(content) if available.
             I have limited the notice types to text and images only. if it is text, remove the image tag and display just the subject and comment(content)-->
-            <p><img class=\"img-responsive\"  style=\"height: 350px;width: 650px;\" src=\"data:image;base64, {$encoded_image}\"></p>
-            <h3 class=\"ctitle\">$subject</h3>
+            <p><img class=\"img-responsive\" src=\"data:image;base64, {$encoded_image}\" id='image'></p>
+            <h3 class=\"ctitle\" id='sub'>$subject</h3>
             <p><csmall>Posted: $newdate</csmall> | <csmall2>By: $username </csmall2></p>
             <p>$comment</p>
             <form action = \"viewaddetails.php\" method = \"post\" style = \"background: none\"> 
@@ -58,36 +59,28 @@ echo "<div id=\"blue\">
             <div class=\"hline\"></div>
             <div class=\"spacing\"></div>
         <! --/col-lg-8 -->";
+                    }
                 }
-            }
 
-            ?>
-        </div>
-      <div class="col-lg-1 col-md-1"> </div>
-        <! -- SIDEBAR -->
-        <div class="col-lg-4">
-            <h4 style="color: black;">Search</h4>
-            <p>
-                <br/>
-                <input type="text" class="form-control" placeholder="Search something">
-            </p>
+                ?>
+            </div>
 
-            <div class="spacing"></div>
+            <! -- SIDEBAR -->
+            <div class="col-lg-4">
 
-            <h4 style="color: black;">Categories</h4>
-            <div class="hline"></div>
-            <p><a href="#"><i class="fa fa-angle-right"></i> Entertainment</a> </p>
-            <p><a href="#"><i class="fa fa-angle-right"></i> Business</a></p>
-            <p><a href="#"><i class="fa fa-angle-right"></i> Politics</a> </p>
-            <p><a href="#"><i class="fa fa-angle-right"></i> Sports</a> </p>
-            <p><a href="#"><i class="fa fa-angle-right"></i> Social Issues</a> </p>
-            <p><a href="#"><i class="fa fa-angle-right"></i> Technology</a> </p>
+                <h4 style="color: black;">Categories</h4>
+                <div class="hline"></div>
+                <?php
+                $cat_array = getAllCategories();
+                foreach ($cat_array as $cat){
+                    $cat_id = $cat['cat_id'];
+                    $cat_name = $cat['cat_name'];
+                    echo "<p onclick= \"getAllCatAds($cat_id)\"><a href=\"#\"><i class=\"fa fa-angle-right\"></i> $cat_name</a> </p>";
+                }
 
-            <div class="spacing"></div>
+                ?>
 
-            <!-- The tags are based on the subject and comment common -->
-            <h4>Popular Tags</h4>
-        </div>
+            </div>
 
-    </div><! --/row -->
-</div><! --/container -->
+        </div><! --/row -->
+    </div><! --/container -->

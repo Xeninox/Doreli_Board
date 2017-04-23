@@ -13,15 +13,17 @@ var dispAd = document.getElementById("dispAd");
 function validateForm() 
 {
 	//checking if a category is selected
-	if (catType.options[catType.selectedIndex].value; == "0" )
+	if (catType.options[catType.selectedIndex].value == "0" )
 	{
 		alert("Please select a category");
+		return false;
 	}
 
 	//checking if subject is filled
 	if (topic.value == "")
 	{
 		alert("Subject not filled");
+        return false;
 	}
 
 	else 
@@ -32,6 +34,7 @@ function validateForm()
 		if (temp.test(topic.value)) 
 		{
 			alert("Subject cannot have symbols");
+            return false;
 		}
 	}
 
@@ -39,7 +42,15 @@ function validateForm()
 	if (comment.value == "")
 	{
 		alert("Comment / description not filled");
+        return false;
 	}
+
+    //checking if a category is selected
+    if (dispAd.options[dispAd.selectedIndex].value == "0" )
+    {
+        alert("Please select a display option");
+        return false;
+    }
 
 	//checking if the right file extention was uploaded
 	if (subFile.type == "file") 
@@ -66,22 +77,15 @@ function validateForm()
                 alert("Sorry, " + subName + " is an invalid file, you can only upload files with these extensions: " + 
                 	_validFileExtensions.join(", "));
                 subFile.value = "";
+                return false;
                 
             }
         }
     }
 
-	//checking if a category is selected
-	if (dispAd.options[dispAd.selectedIndex].value; == "0" )
-	{
-		alert("Please select a display option");
-	}
-	
-	else {}
+
+	return true;
 }
-
-
-var _validFileExtensions = [".jpg", ".jpeg", ".bmp", ".gif", ".png"];    
 
 
 

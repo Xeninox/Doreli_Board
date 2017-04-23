@@ -75,13 +75,14 @@
                             $user_id = $item['user_id'];
                             $username_array = getUsername($user_id);
                             $username = $username_array['username'];
+                            $newdate = date('d F Y', strtotime($date));
 
                             echo "
                                 <! -- Post 1 -->
                                 
                                 <p><img class=\"img-responsive\" style=\"height: 350px;width: 650px;\" src=\"data:image;base64, {$encoded_image}\"></p>
                                 <h3 class=\"ctitle\">$subject</h3>
-                                <p><csmall>Posted: $date</csmall> | <csmall2>By: $username </csmall2></p>
+                                <p><csmall>Posted: $newdate</csmall> | <csmall2>By: $username </csmall2></p>
                                 <p>$comment</p>
                                 <form action = \"\" method = \"post\" style = \"background: none\">
                                 <button type='submit' name='edit' value = \"$ad_id\" class=\"btn btn-primary btn-lg\">Edit Ad</button>

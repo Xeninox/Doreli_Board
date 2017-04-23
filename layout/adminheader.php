@@ -8,19 +8,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="../">Doreli Board</a>
+            <a class="navbar-brand" href="">Doreli Board</a>
         </div>
         <div class="navbar-collapse collapse navbar-right">
             <ul class="nav navbar-nav">
 
                 <?php
                 if($_SESSION['role'] == 1){
-                    echo "
+                    echo "<li><a href=\"institution-ads.php\">MY INSTITUTION ADS</a></li>
                 <li><a href=\"accept-users.php\">USER REQUEST</a></li>
                 <li><a href=\"admin-analysis.php\">ANALYSIS</a></li>";
                 }
                 ?>
-                <li><a href="institution-ads.php">MY INSTITUTION ADS</a></li>
+
                 <li><a href="upload.php">UPLOAD</a></li>
                 <li class="dropdown active">
                     <?php $encoded_image = base64_encode($_SESSION['profile_pic']);
@@ -29,7 +29,7 @@
 
                     <ul class="dropdown-menu">
                         <li><a href="userPost.php">MY POSTS</a></li>
-                        <li><a href="userpage.php">MY PROFILE</a></li>
+                        <li><a href="newpublicpage.php">PUBLIC POSTS</a></li>
                         <li><a href="../login/logout.php">LOGOUT</a></li>
                     </ul>
                 </li>
