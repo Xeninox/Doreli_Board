@@ -30,6 +30,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="userPost.php">MY POSTS</a></li>
                         <li><a href="newpublicpage.php">PUBLIC POSTS</a></li>
+                        <li><a href="userpage.php">MY DETAILS</a></li>
                         <li><a href="../login/logout.php">LOGOUT</a></li>
                     </ul>
                 </li>

@@ -64,8 +64,7 @@ $ppic = $item['profile_picture'];
 $encoded_image = base64_encode($ppic);
 
   echo "
-    <img src=\"../image/post01.jpg\" style=\"height: 350px;\" class=\"img-responsive img-circle\">
-     <p><!--img class=\"img-responsive\" src=\"data:image;base64, {$encoded_image}\"--></p>
+     <p><img class=\"img-responsive img-circle\" src=\"data:image;base64, {$encoded_image}\"</p>
 <center><br>
 <h4>Username : $username</h4> 
 <h4>First name: $firstname</h4>
