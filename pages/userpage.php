@@ -42,6 +42,17 @@ include_once('../controller/userDetailsController.php');
  include_once('../layout/adminheader.php'); 
  $array = getUserDetails();
  ?>
+<!-- *****************************************************************************************************************
+	 BLUE WRAP
+	 ***************************************************************************************************************** -->
+<div id="blue">
+    <div class="container">
+        <div class="row">
+            <h3>My Details</h3>
+        </div><!-- /row -->
+    </div> <!-- /container -->
+</div><!-- /blue -->
+
 <div class="container mtb" style="background-color: #00b3fe">
 <div class="row">
 <div class="col-md-6" style="margin-top: 2%">
@@ -160,18 +171,15 @@ getUserDetails();
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
-	<script src="../js/retina-1.1.0.js"></script>
-	<script src="../js/jquery.hoverdir.js"></script>
-	<script src="../js/jquery.hoverex.min.js"></script>
-	<script src="../js/jquery.prettyPhoto.js"></script>
-	<script src="../js/jquery.isotope.min.js"></script>
-	<script src="../js/custom.js"></script>
-	<script src="../js/ajax.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/retina-1.1.0.js"></script>
+<script src="../js/jquery.hoverdir.js"></script>
+<script src="../js/jquery.hoverex.min.js"></script>
+<script src="../js/jquery.prettyPhoto.js"></script>
+<script src="../js/jquery.isotope.min.js"></script>
+<script src="../js/custom.js"></script>
+<script src="../js/ajax.js"></script>
 
 </body>
 </html>
