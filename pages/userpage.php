@@ -45,7 +45,7 @@ include_once('../controller/userDetailsController.php');
 <div class="container mtb" style="background-color: #00b3fe">
 <div class="row">
 <div class="col-md-6" style="margin-top: 2%">
-<div class="panel panel-info">
+<div class="panel panel-primary">
 <div class="panel-heading">
 <center><h1>User Profile Details</h1></center>
 	
@@ -90,7 +90,7 @@ $encoded_image = base64_encode($ppic);
 if(isset($_POST['edit'])){
 
 echo '
-	<div class="panel panel-info" style="margin-top: 4%" >
+	<div class="panel panel-primary" style="margin-top: 4%" >
 <div class="panel-heading">
 <h3 class="panel-title" style="color: #fff">Update Information</h3>
 	
