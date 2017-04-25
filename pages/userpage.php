@@ -48,7 +48,8 @@ include_once('../controller/userDetailsController.php');
 <div id="blue">
     <div class="container">
         <div class="row">
-            <h3>My Details</h3>
+            <h3>My Profile Details</h3>
+            <?php profilestatus(); ?>
         </div><!-- /row -->
     </div> <!-- /container -->
 </div><!-- /blue -->
@@ -86,9 +87,9 @@ $encoded_image = base64_encode($ppic);
 
 ?>
 <form method="post" action="">
-	<button type="submit" class="btn btn-lg btn-primary btn-block" name="edit">Edit Profile</button><br>
+	<button type="submit" class="btn btn-lg btn-primary btn-block" name="edit">Edit my Profile</button><br>
 
-<button type="submit" class="btn btn-lg btn-danger btn-block" name="delete">Delete</button><br>
+<button type="submit" class="btn btn-lg btn-danger btn-block" name="delete">Deactivate my Account</button><br>
 </form>
 </div>
 </div>
@@ -108,7 +109,7 @@ echo '
 
 	<div class="panel-body"> 
 
-		<form method="POST" action="">
+		<form method="POST" action="" enctype="multipart/form-data">
 			<fieldset>
 
 				<div class="form-group">                       
@@ -136,7 +137,7 @@ echo '
 
 
 				<div class="form-group">                      
-					<input class="form-control" placeholder="Password" name="password" type="password" id="pswd" value="'.$password.'" required>
+					<input class="form-control" placeholder="Password" name="password" type="password" id="pswd" value="" required>
 					
 				</div>
 
@@ -146,7 +147,7 @@ echo '
 					
 				</div>      
 
-				<button name="Update" type="submit" class="btn btn-lg btn-success btn-block">Update</button><br>
+				<button name="Update" type="submit" class="btn btn-lg btn-success btn-block">Save Changes</button><br>
 
 
 			</fieldset>

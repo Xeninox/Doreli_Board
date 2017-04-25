@@ -43,7 +43,7 @@ require_once("../controller/uploadcontroller.php");
  PAGE CONTENT
  ***************************************************************************************************************** -->
 
-<div class="container mtb">
+<div class="container mtb" style="margin-top: 20px">
     <div class="row">
 
         <div class="col-lg-8">

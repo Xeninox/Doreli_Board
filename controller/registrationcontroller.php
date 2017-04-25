@@ -124,8 +124,8 @@
           $tempImage = addslashes($_FILES[$filename]['tmp_name']);
           $imageName = addslashes($_FILES[$filename]['name']);
           $getimage = addslashes(file_get_contents($tempImage));
-          $image = base64_encode($tempImage);
-          return $image;
+          //$image = base64_encode($tempImage);
+          return $getimage;
         }
 
 

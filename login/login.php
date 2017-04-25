@@ -14,7 +14,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
 
-    <title>Signup for Doreli</title>
+    <title>login for Doreli</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
@@ -63,14 +63,16 @@
         </div>
       </div>
     </div>
-
-
+        
 
 <!-- *****************************************************************************************************************
  HEADERWRAP
  ***************************************************************************************************************** -->
 <div id="headerwrap">
-    <div class="container">
+
+    <div class="container" style="margin-top:0px">
+    <h3 style="font-weight: 25%">Login to See What Others are Doing</h3> <br>
+            <?php loginstatus(); ?>
 
         <div class="row" style="height: 75vh;">
             <div class="col-md-4">
@@ -79,23 +81,22 @@
             <div class="col-md-4 col">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Please Log In</h3>
+                        <h3 class="panel-title"> Log In Here</h3>
                     </div>
                     <div class="panel-body">
                         <form method="post" action= "">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Username" name="username" type="text" autofocus>
+                                    <input class="form-control" placeholder="Username" name="username" type="text" value= "<?php if(isset($_POST["username"]) && !empty($_POST["username"])) echo $_POST["username"];?>" autofocus>
+                                    <span style="color: red"> <?php if(isset($GLOBALS['usernameError'])){ echo $GLOBALS['usernameError']; }?></span><br>
                                 </div>
+
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" value= "<?php if(isset($_POST["password"]) && !empty($_POST["password"])) echo $_POST["password"];?>" autofocus>
+                                    <span style="color: red"> <?php if(isset($GLOBALS['pwdError'])){ echo $GLOBALS['pwdError']; }?></span> <br>
                                 </div>
-                                <div class="form-group">
-                                    <label>
-                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
-                                    </label>
-                                </div>
-                                <!-- Change this to a button or input when using this as a form -->
+                                
+                                
                                 <input type= "submit" class="btn btn-lg btn-primary btn-block btn-theme" name="login" value = "Login">
                             </fieldset>
                         </form>
@@ -106,7 +107,41 @@
         </div>
     </div>
 </div>
-<?php include_once('../layout/footer.php'); ?>
+<!-- *****************************************************************************************************************
+     FOOTER
+     ***************************************************************************************************************** -->
+     <div id="footerwrap">
+        <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <h4>About Doreli</h4>
+                <div class="hline-w"></div>
+                <p>Doreli Board is an online advertising board that is used by any institution to transmit information to its members. Doreli Board has made it easier to transmit information in the company by alerting members of the company whenever a message is sent.</p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Social Links</h4>
+                <div class="hline-w"></div>
+                <p>
+                    <a href=""><i class="fa fa-dribbble"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-tumblr"></i></a>
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Our Address</h4>
+                <div class="hline-w"></div>
+                <p>
+                    Ashesi University College<br/>
+                    1 University Avenue,<br/>
+                    Berekuso Ghana.<br/>
+                </p>
+            </div>
+
+        </div><! --/row -->
+    </div><! --/container -->
+     </div><!--/footerwrap -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>

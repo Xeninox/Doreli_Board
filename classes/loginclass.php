@@ -32,20 +32,20 @@ class Login extends DatabaseConnection{
                     $_SESSION['role']=$r['role'];
                     $_SESSION['institution_id']=$r['institution_id'];
                     $_SESSION['profile_pic']=$r['profile_picture'];
-                    return true;
+                    return 3;
                     //header("Location:index.php");
                 }else{
-                    return false;
+                    return 2;
                 }
             }
         } else{
-            return false;
+            return 1;
         }
     }
 
-
 }
-
-
-
+/*
+$ob = new Login;
+var_dump($ob->verifylogin("nik", "coffie999"));
+*/
 ?>
