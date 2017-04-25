@@ -99,6 +99,7 @@ $encoded_image = base64_encode($ppic);
 <div class="col-md-6">
 <?php 
 if(isset($_POST['edit'])){
+    $oldpass = $_SESSION['old_pass'];
 
 echo '
 	<div class="panel panel-primary" style="margin-top: 4%" >
@@ -137,7 +138,7 @@ echo '
 
 
 				<div class="form-group">                      
-					<input class="form-control" placeholder="Password" name="password" type="password" id="pswd" value="" required>
+					<input class="form-control" placeholder="Password" name="password" type="password" id="pswd" value="'.$oldpass.'" >
 					
 				</div>
 

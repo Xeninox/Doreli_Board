@@ -21,6 +21,7 @@ class Login extends DatabaseConnection{
 
     function verifylogin($username, $password){
 
+
         $mysql = "SELECT * FROM users WHERE username = '$username' AND status = 'ACTIVE'";
         $dbquery = $this->query($mysql);
 
@@ -28,6 +29,7 @@ class Login extends DatabaseConnection{
             while($r = $this->fetch()){
                 if (password_verify($password,$r['password'])){
                     session_start();
+                    $_SESSION['old_pass'] = $password;
                     $_SESSION['user_id']= $r['user_id'];
                     $_SESSION['role']=$r['role'];
                     $_SESSION['institution_id']=$r['institution_id'];
