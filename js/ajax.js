@@ -87,8 +87,8 @@ function getAllCatAds(catid, inst_id){
             if (obj > 0){
 
                 for (var i = 0; i < obj; i++){
-                    divElements += '<div class="col-md-4">'+ '<a href="#" class="thumbnail">'+'<p><img class="img-responsive" src="data:image;base64,'+jsonResponse[i].ad_file+'" id="image" style="height: 200px;"></p>'+'<h3 class="ctitle" id="sub">'+jsonResponse[i].subject+'</h3>'
-                        +'<button type="submit" name="viewad" value ="'+jsonResponse[i].id+'" class="btn btn-warning btn-block">View Ad</button> <br>'
+                    divElements += '<div class="col-md-6">'+ '<a href="#" class="thumbnail">'+'<p><img class="img-responsive" src="data:image;base64,'+jsonResponse[i].ad_file+'" id="image" style="height: 200px;"></p>'+'<h3 class="ctitle" id="sub">'+jsonResponse[i].subject+'</h3>'
+                        +'<form action = "viewaddetails.php" method = "post" style ="background: none"> '+'<button type="submit" name="viewad" value ="'+jsonResponse[i].id+'" class="btn btn-warning btn-block">View Ad</button></form><br><br>'
                         +'</a></div>';
                 }
                 $('#con').append(divElements);
@@ -119,8 +119,8 @@ function getAllCatAdsForPublic(catid){
             if (obj > 0){
 
                 for (var i = 0; i < obj; i++){
-                    divElements += '<div class="col-md-4">'+ '<a href="#" class="thumbnail">'+'<p><img class="img-responsive" src="data:image;base64,'+jsonResponse[i].ad_file+'" id="image" style="height: 200px;"></p>'+'<h3 class="ctitle" id="sub">'+jsonResponse[i].subject+'</h3>'
-                        +'<button type="submit" name="viewad" value ="'+jsonResponse[i].id+'" class="btn btn-warning btn-block">View Ad</button> <br>'
+                    divElements += '<div class="col-md-6">'+ '<a href="#" class="thumbnail">'+'<p><img class="img-responsive" src="data:image;base64,'+jsonResponse[i].ad_file+'" id="image" style="height: 200px;"></p>'+'<h3 class="ctitle" id="sub">'+jsonResponse[i].subject+'</h3>'
+                        +'<form action = "viewaddetails.php" method = "post" style ="background: none"> '+'<button type="submit" name="viewad" value ="'+jsonResponse[i].id+'" class="btn btn-warning btn-block">View Ad</button></form><br><br>'
                         +'</a></div>';
                 }
                 $('#con').append(divElements);

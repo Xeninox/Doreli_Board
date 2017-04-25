@@ -40,7 +40,7 @@
             <!-- You can use this code at the php part to display the reults. Provide the subject, picture,
             date posted, username of user who posted and the comment(content) if available.
             I have limited the notice types to text and images only. if it is text, remove the image tag and display just the subject and comment(content)-->
-            <div class=\"col-md-4\">
+            <div class=\"col-md-6\">
         <a href=\"#\" class=\"thumbnail\">
              <p><img class=\"img-responsive\" src=\"data:image;base64, {$encoded_image}\" id='image' style='height: 200px;'></p>
             <h3 class=\"ctitle\" id='sub'>$subject</h3>

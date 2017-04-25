@@ -89,8 +89,8 @@
          {
             if (!empty($GLOBALS['status']) && $GLOBALS['status'] == 1) {
             	echo "<center><h2 style='color:green'>Registration Successful </h2></center> <br>
-            	<h4 style='color:green'>You will be redirected to login pages in 5 seconds<h4>";
-                header("Refresh:5; URL=../login/login.php");
+            	<h4 style='color:green'>You will be redirected to login pages in a few seconds<h4>";
+                header("Refresh:2; URL=../login/login.php");
             }
             else if (!empty($GLOBALS['status']) && $GLOBALS['status'] == 2) {
                 echo "<center><h2 style='color:red'> Registration Unsuccessful </h2></center>" ;

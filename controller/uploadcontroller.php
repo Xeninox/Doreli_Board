@@ -186,7 +186,7 @@ function uploadstatus()
 {
     if (!empty($GLOBALS['status']) && $GLOBALS['status'] == 1) {
         echo "<center><h2 style='color:green'>Upload Ad Successful </h2></center> <br>
-                <h3 style='color:green'>You will be redirected to institution pages in 2  seconds<h3>";
+                <h3 style='color:green'>You will be redirected to the page in a few seconds<h3>";
         if ($GLOBALS['display'] == "PUBLIC")
             header( "refresh:2; url=newpublicpage.php" );
         else if ($GLOBALS['display'] == "INSTITUTION")
