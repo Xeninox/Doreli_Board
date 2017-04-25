@@ -5,8 +5,7 @@
 /**
  * function to make a user active and display success message
  */
-function makeUserActive() {
-    var id = document.getElementById('userId').value;
+function makeUserActive(id) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
@@ -23,6 +22,27 @@ function makeUserActive() {
         }
     };
     xhttp.open("GET", "../controller/AjaxCallsController.php?userid="+id+"&msg=0", true);
+    xhttp.send();
+
+}
+
+function makeUserInActive(id) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+            var jsonResponse = JSON.parse(this.responseText);
+            if (jsonResponse[0].status === 'success'){
+                $("#alert_template button").after('<span>User Made Inactive</span>');
+                $('#alert_template').fadeIn('slow')
+                window.setTimeout(function(){location.reload()},1500)
+            } else if (jsonResponse[0].status === 'failed'){
+                $("#alert_template button").after('<span>User Acceptance Failed</span>');
+                $('#alert_template').fadeIn('slow')
+                window.setTimeout(function(){location.reload()},1500)
+            }
+        }
+    };
+    xhttp.open("GET", "../controller/AjaxCallsController.php?userid="+id+"&msg=4", true);
     xhttp.send();
 
 }
@@ -56,7 +76,7 @@ function rejectUser() {
  * function to get all the ads that belong to a particular category for an institution
  * @param catid the category id
  */
-function getAllCatAds(catid){
+function getAllCatAds(catid, inst_id){
     var divElements = "";
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
@@ -81,7 +101,7 @@ function getAllCatAds(catid){
             }
         }
     };
-    xhttp.open("GET", "../controller/AjaxCallsController.php?cat_id="+catid+"&msg=2", true);
+    xhttp.open("GET", "../controller/AjaxCallsController.php?cat_id="+catid+"&inst_id="+inst_id+"&msg=2", true);
     xhttp.send();
 }
 

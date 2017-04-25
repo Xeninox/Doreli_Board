@@ -73,14 +73,14 @@
                             $encoded_image = base64_encode($poster);
                             $date = $item['date_added'];
                             $user_id = $item['user_id'];
-                            $username_array = getUsername($user_id);
+                            $username_array = GetUsername($user_id);
                             $username = $username_array['username'];
                             $newdate = date('d F Y', strtotime($date));
 
                             echo "
                                 <! -- Post 1 -->
                                 
-                                <p><img class=\"img-responsive\" style=\"height: 350px;width: 650px;\" src=\"data:image;base64, {$encoded_image}\"></p>
+                                <p><img class=\"img-responsive\" src=\"data:image;base64, {$encoded_image}\"></p>
                                 <h3 class=\"ctitle\">$subject</h3>
                                 <p><csmall>Posted: $newdate</csmall> | <csmall2>By: $username </csmall2></p>
                                 <p>$comment</p>

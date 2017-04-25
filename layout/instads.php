@@ -40,7 +40,7 @@ echo "<div id=\"blue\">
                         $encoded_image = base64_encode($poster);
                         $date = $item['date_added'];
                         $user_id = $item['user_id'];
-                        $username_array = getUsername();
+                        $username_array = fetchUsername();
                         $username = $username_array['username'];
                         $newdate = date('d F Y', strtotime($date));
 
@@ -71,11 +71,12 @@ echo "<div id=\"blue\">
                 <h4 style="color: black;">Categories</h4>
                 <div class="hline"></div>
                 <?php
+                $inst_id = $_SESSION['institution_id'];
                 $cat_array = getAllCategories();
                 foreach ($cat_array as $cat){
                     $cat_id = $cat['cat_id'];
                     $cat_name = $cat['cat_name'];
-                    echo "<p onclick= \"getAllCatAds($cat_id)\"><a href=\"#\"><i class=\"fa fa-angle-right\"></i> $cat_name</a> </p>";
+                    echo "<p onclick= \"getAllCatAds($cat_id, $inst_id)\"><a href=\"#\"><i class=\"fa fa-angle-right\"></i> $cat_name</a> </p>";
                 }
 
                 ?>

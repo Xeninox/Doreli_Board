@@ -20,6 +20,11 @@ class AdminFunctionClass extends DatabaseConnection
         return $this->query($make_user_active_query);
     }
 
+    function makeUserInactive($user_id){
+        $make_user_inactive_query = "UPDATE users SET status = 'INACTIVE' WHERE user_id = '$user_id'";
+        return $this->query($make_user_inactive_query);
+    }
+
 
     /**
      * This function allows an admin to reject a user
@@ -69,6 +74,11 @@ class AdminFunctionClass extends DatabaseConnection
     function getAllNewUsers($admin_inst_id){
         $get_users_query = "SELECT * FROM users WHERE status = 'INACTIVE' AND institution_id = '$admin_inst_id'";
         return $this->query($get_users_query);
+    }
+
+    function getAllUsers($admin_inst_id){
+        $get_all_users_query = "SELECT * FROM users WHERE status = 'ACTIVE' AND institution_id = '$admin_inst_id' AND role != 1";
+        return $this->query($get_all_users_query);
     }
 
 }

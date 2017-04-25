@@ -17,12 +17,13 @@ class InstitutionAds extends DatabaseConnection
         return $this->query($get_inst_ads);
     }
 
+
     /**
      * This function returns the username of anyone who posted an ad
      * @param $user_id the id of the user
      * @return boolean the result of the query
      */
-    function getUsername($user_id){
+    function fetchUsername($user_id){
         $get_username = "SELECT username FROM users WHERE user_id = '$user_id'";
         return $this->query($get_username);
     }
@@ -52,8 +53,8 @@ class InstitutionAds extends DatabaseConnection
      * @param $cat_id the category id
      * @return boolean the result of the query
      */
-    function getCategoryAds($cat_id){
-        $cat_ads = "SELECT * FROM ads WHERE cat_id = '$cat_id'";
+    function getCategoryAds($cat_id, $inst_id){
+        $cat_ads = "SELECT * FROM ads WHERE cat_id = '$cat_id' AND institution_id = '$inst_id'";
         return $this->query($cat_ads);
     }
 
