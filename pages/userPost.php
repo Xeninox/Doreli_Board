@@ -181,7 +181,6 @@ require_once('../controller/postcontroller.php');
 //require_once("../layout/footer.php");
 ?>
 
-<?php include_once('../layout/footer.php'); ?>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
