@@ -85,8 +85,8 @@ function convImage($input)
 function profilestatus()
 {
     if (!empty($GLOBALS['status']) && $GLOBALS['status'] == 1) {
-        echo "<h3 style='color:green'> Account Successfully Deleted</h3>
-        <h3 style='color:green'>You will be redirected to login pages in 2  seconds<h3> <br>";
+        echo "<h3 style='color:green'> Account Successfully Deactivated</h3>
+        <h3 style='color:green'>You will be redirected to login pages in a few seconds<h3> <br>";
         header( "refresh:2; url=../login/login.php" );
 
     }

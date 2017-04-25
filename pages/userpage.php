@@ -36,8 +36,8 @@
 </head>
 
 <body>
-<?php 
-session_start();
+<?php
+include_once('../settings/core_ini.php');
 include_once('../controller/userDetailsController.php');
  include_once('../layout/adminheader.php'); 
  $array = getUserDetails();
