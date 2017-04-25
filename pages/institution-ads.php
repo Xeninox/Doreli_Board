@@ -42,10 +42,6 @@ include_once('../settings/core_ini.php');
 <?php include_once('../layout/adminheader.php'); ?>
 <?php include_once('../layout/instads.php'); ?>
 
-
-
-
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../js/retina-1.1.0.js"></script>

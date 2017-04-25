@@ -2,12 +2,12 @@
 $user_inst_array = getUserInstituion();
 $user_inst = $user_inst_array['name'];
 echo "<div id=\"blue\">
-    <div class=\"container\">
-        <div class=\"row\">
-            <h3>Manage $user_inst Ads</h3>
-        </div><!-- /row -->
-    </div> <!-- /container -->
-</div><!-- /blue -->";
+        <div class=\"container\">
+            <div class=\"row\">
+                <h3>Manage $user_inst Ads</h3>
+            </div><!-- /row -->
+        </div> <!-- /container -->
+    </div><!-- /blue -->";
 ?>
 
 
@@ -44,22 +44,20 @@ echo "<div id=\"blue\">
                     $username = $username_array['username'];
                     $newdate = date('d F Y', strtotime($date));
 
-                    echo "
-            <! -- Post 1 -->
-            <!-- You can use this code at the php part to display the reults. Provide the subject, picture,
-            date posted, username of user who posted and the comment(content) if available.
-            I have limited the notice types to text and images only. if it is text, remove the image tag and display just the subject and comment(content)-->
-            <p><img class=\"img-responsive\" src=\"data:image;base64, {$encoded_image}\" id='image'></p>
-            <h3 class=\"ctitle\" id='sub'>$subject</h3>
-            <p><csmall>Posted: $newdate</csmall> | <csmall2>By: $username </csmall2></p>
-            <p>$comment</p>
-            <form action = \"\"method=\"post\" style=\"background: none\">
-            <button type='submit' name='edit' value =\"$ad_id\" class=\"btn btn-primary btn-lg\">Edit Ad</button>
-            <button type='submit' name='delete' value =\"$ad_id\" class=\"btn btn-danger btn-lg\">Delete Ad</button>
-            </form><br>
-            <div class=\"hline\"></div>
-            <div class=\"spacing\"></div>
-        <! --/col-lg-8 -->";
+                    echo "<div class=\"col-md-6\">
+            <a href=\"#\" class=\"thumbnail\">
+                 <p><img class=\"img-responsive\" src=\"data:image;base64, {$encoded_image}\" id='image' style='height: 200px;'></p>
+                <h3 class=\"ctitle\" id='sub'>$subject</h3>
+                <p><csmall>Posted: $newdate</csmall> | <csmall2>By: $username </csmall2></p>
+                                    <p>$comment</p>
+                                    <form action = \"\" method = \"post\" style = \"background: none\">
+                                    <button type='submit' name='edit' value = \"$ad_id\" class=\"btn btn-primary btn-sm\">Edit Ad</button>
+    
+                                    <button type='submit' name='delete' value = \"$ad_id\" class=\"btn btn-danger btn-sm \">Delete Ad</button>
+                                   </form>
+                                    <br>
+            </a>
+        </div>";
                 }
             }
             ?>
@@ -82,61 +80,61 @@ echo "<div id=\"blue\">
                     $display = $item['display'];
 
                     echo '
-                  <div class="panel panel-primary">
-                  <div class="panel-heading">
-                        <h3 class="panel-title">Update Ad Details</h3>
-                    </div>
-                    
-                    <div class="panel-body">
-                            <div class="myForm">
-                                <form method="POST" action="" enctype="multipart/form-data">
-                                    <div class="form-group">
-                                        <label>Category</label>
-                                        <select class="form-control" id="catType" name="catType" required>
-                                        ';
+                      <div class="panel panel-primary">
+                      <div class="panel-heading">
+                            <h3 class="panel-title">Update Ad Details</h3>
+                        </div>
+                        
+                        <div class="panel-body">
+                                <div class="myForm">
+                                    <form method="POST" action="" enctype="multipart/form-data">
+                                        <div class="form-group">
+                                            <label>Category</label>
+                                            <select class="form-control" id="catType" name="catType" required>
+                                            ';
                     displayCategories($GLOBALS['category']);
                     echo '
-                                        </select>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Subject</label>
-                                        <input class="form-control" id="topic" name="subj" value = "'.$subject.'" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Comment</label>
-                                        <textarea class="form-control" rows="3" id="comm" name="comment" required>'.$comment.'</textarea>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Maintain file or upload new </label>
-                                        <input type="file" id="subFile" name="filename">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Send Notice to</label>
-                                        <select class="form-control" id="dispAd" name="display" required>
-                                            ';
+                                            </select>
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <label>Subject</label>
+                                            <input class="form-control" id="topic" name="subj" value = "'.$subject.'" required>
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <label>Comment</label>
+                                            <textarea class="form-control" rows="3" id="comm" name="comment" required>'.$comment.'</textarea>
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <label>Maintain file or upload new </label>
+                                            <input type="file" id="subFile" name="filename">
+                                        </div>
+    
+                                        <div class="form-group">
+                                            <label>Send Notice to</label>
+                                            <select class="form-control" id="dispAd" name="display" required>
+                                                ';
                     echo'
-                                            <option value= "PUBLIC"';
+                                                <option value= "PUBLIC"';
                     if ($display == "PUBLIC") { echo "selected";}
                     echo'>PUBLIC</option>';
                     echo' 
-                                            <option value= "INSTITUTION"';
+                                                <option value= "INSTITUTION"';
                     if ($display == "INSTITUTION") { echo "selected";}
                     echo ';
-                                            >INSTITUTION</option>';
+                                                >INSTITUTION</option>';
                     echo'     
-                                        </select>
-                                    </div>
-
-                                    <button type="submit" class="btn btn-success btn-lg btn-block" id="subButton" name="update" value = "'.$ad_id.'">Save Changes</button>
-                                </form>
+                                            </select>
+                                        </div>
+    
+                                        <button type="submit" class="btn btn-success btn-lg btn-block" id="subButton" name="update" value = "'.$ad_id.'">Save Changes</button>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
-                     </div>   
-                  ';
+                         </div>   
+                      ';
                 }
             }
             ?>

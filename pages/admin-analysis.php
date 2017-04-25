@@ -42,7 +42,7 @@ include_once('../settings/core_ini.php');
 <?php include_once('../controller/AdminFunctionController.php'); ?>
 <?php include_once('../layout/adminheader.php'); ?>
 <?php include_once('../layout/analysis.php'); ?>
-<?php include_once('../layout/footer.php'); ?>
+<?php include_once('../layout/inst-footer.php'); ?>
 
 
 

@@ -40,15 +40,15 @@
             <!-- You can use this code at the php part to display the reults. Provide the subject, picture,
             date posted, username of user who posted and the comment(content) if available.
             I have limited the notice types to text and images only. if it is text, remove the image tag and display just the subject and comment(content)-->
-            <p><img class=\"img-responsive\" src=\"data:image;base64, {$encoded_image}\"></p>
-            <h3 class=\"ctitle\">$subject</h3>
-            <p><csmall>Posted: $newdate</csmall> | <csmall2>By: $username </csmall2></p>
-            <p>$comment</p>
-            <form action = \"viewaddetails.php\" method = \"post\" style = \"background: none\"> 
+            <div class=\"col-md-4\">
+        <a href=\"#\" class=\"thumbnail\">
+             <p><img class=\"img-responsive\" src=\"data:image;base64, {$encoded_image}\" id='image' style='height: 200px;'></p>
+            <h3 class=\"ctitle\" id='sub'>$subject</h3>
+            <form action = \"viewaddetails.php\" method = \"post\" style =\"background: none\"> 
             <button type='submit' name='viewad' value = \"$ad_id\" class=\"btn btn-warning btn-block\">View Ad</button> 
             </form><br>
-            <div class=\"hline\"></div>
-            <div class=\"spacing\"></div>
+        </a>
+    </div>
         <! --/col-lg-8 -->";
                 }
             }

@@ -42,7 +42,7 @@ verifyUserLogin();
 <?php include_once('../controller/AdminFunctionController.php'); ?>
 <?php include_once('../layout/adminheader.php'); ?>
 <?php include_once('../layout/manage-users.php'); ?>
-<?php include_once('../layout/footer.php'); ?>
+<?php include_once('../layout/inst-footer.php'); ?>
 
 
 

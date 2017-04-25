@@ -12,6 +12,7 @@ require_once("../database/dbconnectclass.php");
 
 class ViewAdDetails extends DatabaseConnection
 {
+
     /**
      *a function to get the details of an ad
      *@param $ad_id the id of an ad (poster)

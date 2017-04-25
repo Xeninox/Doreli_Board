@@ -27,12 +27,12 @@
                     echo "<div class=\"col-lg-4\">
                 <div class=\"panel panel-primary text-center no-boder\">
                     <div class=\"panel-body green\">
-                        <i class=\"fa fa-thumbs-up fa-3x\"></i>
+                        <i class=\"fa  fa-3x\"></i>
                         <input type='hidden' name='userid' value='$user_id' id='userId'>
                         <h3>$username</h3>
                     </div>
                     <div class=\"panel-footer\">
-                        <button type=\"button\" class=\"btn btn-warning btn-circle\" onclick=\"makeUserInActive($user_id)\"><i class=\"fa fa-times\"></i>
+                        <button type=\"button\" class=\"btn btn-danger btn-circle\" onclick=\"makeUserInActive($user_id)\"><i class=\"fa fa-exclamation-triangle\"></i>
                         </button>
                     </div>
                 </div>

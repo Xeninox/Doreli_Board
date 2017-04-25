@@ -26,18 +26,6 @@ function validateForm()
         return false;
 	}
 
-	else 
-	{
-		//checking to see if number or symbols are present
-		var temp = /[^a-zA-Z0-9]/;
-		
-		if (temp.test(topic.value)) 
-		{
-			alert("Subject cannot have symbols");
-            return false;
-		}
-	}
-
 	//checking if comment is filled
 	if (comment.value == "")
 	{

@@ -43,7 +43,7 @@
                     <div class=\"panel-footer\">
                         <button type=\"button\" class=\"btn btn-info btn-circle\" onclick=\"makeUserActive($user_id)\"><i class=\"fa fa-check\"></i>
                         </button>
-                        <button type=\"button\" class=\"btn btn-warning btn-circle\" onclick=\"rejectUser($user_id)\"><i class=\"fa fa-times\"></i>
+                        <button type=\"button\" class=\"btn btn-danger btn-circle\" onclick=\"rejectUser($user_id)\"><i class=\"fa fa-times\"></i>
                         </button>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                                 <div class=\"panel-footer\">
                                     <button type=\"button\" class=\"btn btn-info btn-circle\" onclick=\"makeUserActive($user_id)\"><i class=\"fa fa-check\"></i>
                                     </button>
-                                    <button type=\"button\" class=\"btn btn-warning btn-circle\" onclick=\"rejectUser($user_id)\"><i class=\"fa fa-times\"></i>
+                                    <button type=\"button\" class=\"btn btn-danger btn-circle\" onclick=\"rejectUser($user_id)\"><i class=\"fa fa-times\"></i>
                                     </button>
                                 </div>
                             </div>

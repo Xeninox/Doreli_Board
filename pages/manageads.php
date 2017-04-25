@@ -41,6 +41,7 @@ include_once('../settings/core_ini.php');
 ?>
 <?php include_once('../layout/adminheader.php'); ?>
 <?php include_once('../layout/manageads.php'); ?>
+<?php include_once('../layout/footer.php'); ?>
 
 
 
