@@ -31,7 +31,7 @@
                     $encoded_image = base64_encode($poster);
                     $date = $item['date_added'];
                     $user_id = $item['user_id'];
-                    $username_array = getUsername();
+                    $username_array = fetchUsername();
                     $username = $username_array['username'];
                     $newdate = date('d F Y', strtotime($date));
 

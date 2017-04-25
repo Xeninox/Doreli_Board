@@ -81,7 +81,7 @@ function getNumUploadForUser()
  *@param id of the user
  *@return username of the user
  **/
-function getUsername($uId)
+function GetUsername($uId)
 {
     //creating an instance of the post class
     $userPosts = new postUser;

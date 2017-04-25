@@ -30,10 +30,10 @@ function getAllInstutionAds(){
  * function to get the username of a user
  * @return object the result object
  */
-function getUsername(){
+function fetchUsername(){
     global $user_id;
     $inst_ads = new InstitutionAds();
-    $inst_ads->getUsername($user_id);
+    $inst_ads->fetchUsername($user_id);
     return $inst_ads->fetch();
 }
 
@@ -45,7 +45,7 @@ function getUsername(){
  */
 function getUsernameWithID($user_id){
     $inst_ads = new InstitutionAds();
-    $inst_ads->getUsername($user_id);
+    $inst_ads->fetchUsername($user_id);
     return $inst_ads->fetch();
 }
 
@@ -76,9 +76,9 @@ function getNumUploadForInstitution(){
  * @param $cat_id the category id
  * @return object the result object
  */
-function getCatAds($cat_id){
+function getCatAds($cat_id,$institution_id){
     $cat_ads = new InstitutionAds();
-    $cat_ads->getCategoryAds($cat_id);
+    $cat_ads->getCategoryAds($cat_id, $institution_id);
     return $cat_ads->fetchResultObject();
 }
 

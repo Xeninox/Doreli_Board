@@ -16,6 +16,8 @@
                 <?php
                 if($_SESSION['role'] == 1){
                     echo "
+                <li><a href=\"manageusers.php\">MANAGE USERS</a></li>
+                <li><a href=\"manageads.php\">MANAGE ADS</a></li>
                 <li><a href=\"accept-users.php\">USER REQUEST</a></li>
                 <li><a href=\"admin-analysis.php\">ANALYSIS</a></li>";
                 }

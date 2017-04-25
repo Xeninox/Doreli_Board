@@ -53,7 +53,8 @@ switch ($msg){
         break;
     case 2:
         $cat_id = $_REQUEST['cat_id'];
-        $result = getCatAds($cat_id);
+        $inst_id = $_REQUEST['inst_id'];
+        $result = getCatAds($cat_id, $inst_id);
         $success = array();
         if ($result){
             foreach ($result as $res){
@@ -101,6 +102,22 @@ switch ($msg){
                     'display' => $res['display']
                 );
             }
+            echo json_encode($success);
+        } else {
+            $success[] = array(
+                'status' => 'failed'
+            );
+            echo json_encode($success);
+        }
+        break;
+    case 4:
+        $user_id = $_REQUEST['userid'];
+        $result = makeUserInactive($user_id);
+        $success = array();
+        if ($result){
+            $success[] = array(
+                'status' => 'success'
+            );
             echo json_encode($success);
         } else {
             $success[] = array(

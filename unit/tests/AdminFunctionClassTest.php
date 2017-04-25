@@ -14,6 +14,19 @@ class UnitTests extends \PHPUnit_Framework_TestCase{
         $this->assertTrue($accept->acceptUser(1));
     }
 
+    public function testGetNumAcceptedReturnsTrue()
+    {
+        $accept = new AdminFunctionClass();
+        $this->assertTrue($accept->getNumAccepted(1));
+    }
+
+    public function testGetNumInactiveReturnsTrue()
+    {
+        $accept = new AdminFunctionClass();
+        $this->assertTrue($accept->getNumInactive(1));
+    }
+
+
     public function testrejectUserReturnsTrue()
     {
         $accept = new AdminFunctionClass();

@@ -27,6 +27,20 @@ function getAllInactiveUsers(){
     return $admin->fetchResultObject();
 }
 
+
+function makeUserInactive($user_id){
+    $admin = new AdminFunctionClass();
+    $admin->makeUserInactive($user_id);
+    return $admin->fetchResultObject();
+}
+
+function getAllUsers(){
+    global $institution_id;
+    $admin = new AdminFunctionClass();
+    $admin->getAllUsers($institution_id);
+    return $admin->fetchResultObject();
+}
+
 /**
  * Function to make a user active
  * @param $user_id the id of the user

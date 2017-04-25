@@ -41,9 +41,9 @@
                         <h3>$username</h3>
                     </div>
                     <div class=\"panel-footer\">
-                        <button type=\"button\" class=\"btn btn-info btn-circle\" onclick=\"makeUserActive()\"><i class=\"fa fa-check\"></i>
+                        <button type=\"button\" class=\"btn btn-info btn-circle\" onclick=\"makeUserActive($user_id)\"><i class=\"fa fa-check\"></i>
                         </button>
-                        <button type=\"button\" class=\"btn btn-warning btn-circle\" onclick=\"rejectUser()\"><i class=\"fa fa-times\"></i>
+                        <button type=\"button\" class=\"btn btn-warning btn-circle\" onclick=\"rejectUser($user_id)\"><i class=\"fa fa-times\"></i>
                         </button>
                     </div>
                 </div>
@@ -57,9 +57,9 @@
                                     <h3 style=\"color: white;\">$username</h3>
                                 </div>
                                 <div class=\"panel-footer\">
-                                    <button type=\"button\" class=\"btn btn-info btn-circle\" onclick=\"makeUserActive()\"><i class=\"fa fa-check\"></i>
+                                    <button type=\"button\" class=\"btn btn-info btn-circle\" onclick=\"makeUserActive($user_id)\"><i class=\"fa fa-check\"></i>
                                     </button>
-                                    <button type=\"button\" class=\"btn btn-warning btn-circle\" onclick=\"rejectUser()\"><i class=\"fa fa-times\"></i>
+                                    <button type=\"button\" class=\"btn btn-warning btn-circle\" onclick=\"rejectUser($user_id)\"><i class=\"fa fa-times\"></i>
                                     </button>
                                 </div>
                             </div>
